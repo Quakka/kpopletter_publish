@@ -9,8 +9,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="manifest" href="favicon/site.webmanifest">
     
-    <!-- Supabase -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <!-- Supabase 제거 - 서버리스 함수 사용 -->
     
     <!-- reCAPTCHA v3 -->
     <script src="https://www.google.com/recaptcha/api.js?render=YOUR_RECAPTCHA_SITE_KEY"></script>
@@ -581,12 +580,8 @@
     </div>
     
     <script>
-        // Supabase 초기화 (실제 사용시 환경변수로 관리)
-        const SUPABASE_URL = 'YOUR_SUPABASE_URL';
-        const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
+        // reCAPTCHA Site Key (환경변수 대신 서버리스 함수 사용)
         const RECAPTCHA_SITE_KEY = 'YOUR_RECAPTCHA_SITE_KEY';
-        
-        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
         
         // 전역 변수
         let currentNewsId = null;
@@ -692,19 +687,24 @@
                     return;
                 }
                 
-                // Supabase에 저장
-                const { data, error } = await supabase
-                    .from('news_reactions')
-                    .insert([{
+                // 서버리스 API로 반응 저장
+                const response = await fetch('/api/reactions', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
                         news_id: newsId,
                         reaction: reaction,
-                        ip_hash: btoa(userFingerprint).substring(0, 20),
                         fingerprint: userFingerprint,
                         recaptcha_token: token
-                    }]);
+                    })
+                });
                 
-                if (error) {
-                    console.error('Error:', error);
+                const result = await response.json();
+                
+                if (!response.ok) {
+                    console.error('Error:', result.error);
                     showAlert('반응을 저장하는 중 오류가 발생했습니다.', 'error');
                 } else {
                     // 성공시 카운트 업데이트
@@ -848,19 +848,24 @@
                     return;
                 }
                 
-                // Supabase에 저장
-                const { data, error } = await supabase
-                    .from('news_comments')
-                    .insert([{
+                // 서버리스 API로 댓글 저장
+                const response = await fetch('/api/comments', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
                         news_id: currentNewsId,
                         comment: commentText,
-                        ip_hash: btoa(userFingerprint).substring(0, 20),
                         fingerprint: userFingerprint,
                         recaptcha_token: token
-                    }]);
+                    })
+                });
                 
-                if (error) {
-                    console.error('Error:', error);
+                const result = await response.json();
+                
+                if (!response.ok) {
+                    console.error('Error:', result.error);
                     showAlert('의견을 저장하는 중 오류가 발생했습니다.', 'error');
                 } else {
                     showAlert('의견이 저장되었습니다!', 'success');
@@ -883,18 +888,13 @@
         // 댓글 로드
         async function loadComments(newsId) {
             try {
-                const { data, error } = await supabase
-                    .from('news_comments')
-                    .select('comment, created_at')
-                    .eq('news_id', newsId)
-                    .eq('is_approved', true)
-                    .order('created_at', { ascending: false })
-                    .limit(10);
+                const response = await fetch(`/api/comments?news_id=${newsId}`);
+                const result = await response.json();
                 
                 const commentsList = document.getElementById('commentsList');
                 
-                if (!error && data && data.length > 0) {
-                    commentsList.innerHTML = data.map(comment => `
+                if (response.ok && result.data && result.data.length > 0) {
+                    commentsList.innerHTML = result.data.map(comment => `
                         <div class="comment-item">
                             <div class="comment-date">${formatDate(comment.created_at)}</div>
                             <div>${escapeHtml(comment.comment)}</div>
