@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miner7 Newsletter - Beta Test</title>
+    <link rel="icon" type="image/png" href="Logo_Miner7_Final.png">
+    <link rel="apple-touch-icon" href="Logo_Miner7_Final.png">
+    
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
+    <!-- reCAPTCHA v3 -->
+    <script src="https://www.google.com/recaptcha/api.js?render=YOUR_RECAPTCHA_SITE_KEY"></script>
+    
+    <style>
+        /* 한국어 웹폰트 정의 */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.6;
+            color: #182526;
+            background: #efede2;
+            min-height: 100vh;
+            padding: 20px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            word-break: keep-all;
+            word-wrap: break-word;
+        }
+        
+        .newsletter-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #efede2;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(24,37,38,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: #182526;
+            color: #efede2;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #182526 0%, #b1a798 50%, transparent 100%);
+            z-index: 1;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .header-logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .header-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header-subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-top: 10px;
+        }
+        
+        .beta-notice {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .main-content {
+            padding: 40px;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #182526;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .news-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .news-card {
+            background: #efede2;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 4px 4px 12px rgba(24,37,38,0.15);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 6px 6px 20px rgba(24,37,38,0.25);
+        }
+        
+        .news-thumbnail {
+            width: 150px;
+            height: 120px;
+            border-radius: 8px;
+            background-size: cover;
+            background-position: center;
+            background-color: #b1a798;
+            flex-shrink: 0;
+        }
+        
+        .news-content {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .news-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #182526;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        
+        .news-meta {
+            font-size: 0.9rem;
+            color: #636e72;
+            margin-bottom: 15px;
+        }
+        
+        .news-summary {
+            color: #182526;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        /* 피드백 시스템 스타일 */
+        .feedback-section {
+            border-top: 1px solid rgba(177, 167, 152, 0.3);
+            padding-top: 15px;
+            margin-top: 15px;
+        }
+        
+        .reaction-buttons {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .reaction-btn {
+            background: none;
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .reaction-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(24,37,38,0.15);
+        }
+        
+        .reaction-btn.like {
+            border-color: #4CAF50;
+            color: #4CAF50;
+        }
+        
+        .reaction-btn.like.active {
+            background: #4CAF50;
+            color: white;
+        }
+        
+        .reaction-btn.dislike {
+            border-color: #f44336;
+            color: #f44336;
+        }
+        
+        .reaction-btn.dislike.active {
+            background: #f44336;
+            color: white;
+        }
+        
+        .reaction-btn.comment {
+            border-color: #2196F3;
+            color: #2196F3;
+        }
+        
+        .reaction-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        /* 모달 스타일 */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(24,37,38,0.5);
+            backdrop-filter: blur(5px);
+        }
+        
+        .modal-content {
+            background-color: #efede2;
+            margin: 5% auto;
+            padding: 30px;
+            border-radius: 16px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        
+        .close-modal {
+            color: #182526;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .close-modal:hover {
+            opacity: 0.7;
+        }
+        
+        .comment-form {
+            margin-top: 20px;
+        }
+        
+        .comment-textarea {
+            width: 100%;
+            min-height: 100px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 0.9rem;
+            resize: vertical;
+        }
+        
+        .submit-comment-btn {
+            background: #2196F3;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-comment-btn:hover {
+            background: #1976D2;
+            transform: translateY(-1px);
+        }
+        
+        .submit-comment-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        /* 댓글 표시 */
+        .comments-section {
+            margin-top: 20px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        .comment-item {
+            background: rgba(177, 167, 152, 0.1);
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+        
+        .comment-date {
+            color: #636e72;
+            font-size: 0.75rem;
+            margin-bottom: 5px;
+        }
+        
+        /* 로딩 스피너 */
+        .loading {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 2px solid #2196F3;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* 알림 메시지 */
+        .alert {
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-size: 0.9rem;
+        }
+        
+        .alert.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .alert.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .alert.warning {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+        
+        /* 응답형 디자인 */
+        @media (max-width: 768px) {
+            .main-content {
+                padding: 20px;
+            }
+            
+            .news-card {
+                flex-direction: column;
+            }
+            
+            .news-thumbnail {
+                width: 100%;
+                height: 200px;
+            }
+            
+            .reaction-buttons {
+                flex-wrap: wrap;
+            }
+            
+            .header-title {
+                font-size: 2rem;
+            }
+        }
+        
+        /* 허니팟 - 봇 탐지용 숨김 필드 */
+        .honeypot {
+            position: absolute;
+            left: -9999px;
+            top: -9999px;
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <!-- 허니팟 - 봇이 채우면 스팸으로 판단 -->
+    <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off">
+    
+    <div class="newsletter-container">
+        <header class="header">
+            <div class="header-content">
+                <div class="header-logo">
+                    <img src="Logo_Miner7_Final.png" alt="Miner7 Logo">
+                </div>
+                <div>
+                    <div class="header-title">🤖 Miner7 Newsletter</div>
+                    <div class="header-subtitle">AI 기반 금융 뉴스 큐레이션 | Beta Test</div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="beta-notice">
+            🚀 베타 테스트 중입니다! 각 뉴스에 대한 여러분의 피드백을 부탁드립니다 ⭐
+        </div>
+        
+        <main class="main-content">
+            <!-- 실시간 트렌딩 뉴스 -->
+            <section>
+                <h2 class="section-title">
+                    <span>🔥</span>
+                    <span>실시간 트렌딩 뉴스</span>
+                </h2>
+                <div class="news-cards">
+                    <!-- 예시 뉴스 1 -->
+                    <div class="news-card">
+                        <div class="news-thumbnail" style="background-image: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=300&h=200&fit=crop');"></div>
+                        <div class="news-content">
+                            <h3 class="news-title">비트코인, 신고점 돌파하며 10만 달러 향해</h3>
+                            <div class="news-meta">
+                                📰 CoinDesk | ⏰ 2시간 전
+                                <br><a href="#" target="_blank">🔗 원문 보기</a>
+                            </div>
+                            <div class="news-summary">
+                                비트코인이 지난 24시간 동안 15% 상승하며 사상 최고가를 경신했습니다. 기관 투자자들의 대량 매수와 규제 완화 기대감이 상승 동력으로 작용하고 있습니다...
+                            </div>
+                            
+                            <div class="feedback-section">
+                                <div class="reaction-buttons">
+                                    <button class="reaction-btn like" data-news-id="news-1" data-reaction="like">
+                                        👍 <span class="count">0</span>
+                                    </button>
+                                    <button class="reaction-btn dislike" data-news-id="news-1" data-reaction="dislike">
+                                        👎 <span class="count">0</span>
+                                    </button>
+                                    <button class="reaction-btn comment" onclick="openCommentModal('news-1')">
+                                        💬 의견
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 예시 뉴스 2 -->
+                    <div class="news-card">
+                        <div class="news-thumbnail" style="background-image: url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=300&h=200&fit=crop');"></div>
+                        <div class="news-content">
+                            <h3 class="news-title">테슬라 주가 20% 급등, 자율주행 기술 돌파구 마련</h3>
+                            <div class="news-meta">
+                                📰 Reuters | ⏰ 4시간 전
+                                <br><a href="#" target="_blank">🔗 원문 보기</a>
+                            </div>
+                            <div class="news-summary">
+                                테슬라가 완전 자율주행(FSD) 베타 테스트에서 획기적인 성과를 발표하며 주가가 급등했습니다. 일론 머스크는 내년까지 레벨 5 자율주행 상용화를 목표로 한다고...
+                            </div>
+                            
+                            <div class="feedback-section">
+                                <div class="reaction-buttons">
+                                    <button class="reaction-btn like" data-news-id="news-2" data-reaction="like">
+                                        👍 <span class="count">0</span>
+                                    </button>
+                                    <button class="reaction-btn dislike" data-news-id="news-2" data-reaction="dislike">
+                                        👎 <span class="count">0</span>
+                                    </button>
+                                    <button class="reaction-btn comment" onclick="openCommentModal('news-2')">
+                                        💬 의견
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 주요 지역 뉴스 -->
+            <section style="margin-top: 40px;">
+                <h2 class="section-title">
+                    <span>🌍</span>
+                    <span>주요 지역 뉴스</span>
+                </h2>
+                <div class="news-cards">
+                    <!-- 예시 뉴스 3 -->
+                    <div class="news-card">
+                        <div class="news-thumbnail" style="background-image: url('https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=300&h=200&fit=crop');"></div>
+                        <div class="news-content">
+                            <h3 class="news-title">한국은행, 기준금리 0.25%p 인하 결정</h3>
+                            <div class="news-meta">
+                                📰 연합뉴스 | ⏰ 1시간 전
+                                <br><a href="#" target="_blank">🔗 원문 보기</a>
+                            </div>
+                            <div class="news-summary">
+                                한국은행이 통화정책방향 회의에서 기준금리를 기존 3.5%에서 3.25%로 0.25%포인트 인하하기로 결정했습니다. 경기 둔화와 물가 안정세를 고려한 조치로...
+                            </div>
+                            
+                            <div class="feedback-section">
+                                <div class="reaction-buttons">
+                                    <button class="reaction-btn like" data-news-id="news-3" data-reaction="like">
+                                        👍 <span class="count">0</span>
+                                    </button>
+                                    <button class="reaction-btn dislike" data-news-id="news-3" data-reaction="dislike">
+                                        👎 <span class="count">0</span>
+                                    </button>
+                                    <button class="reaction-btn comment" onclick="openCommentModal('news-3')">
+                                        💬 의견
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <!-- 댓글 모달 -->
+    <div id="commentModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeCommentModal()">&times;</span>
+            <h3 id="modal-title">뉴스에 대한 의견</h3>
+            
+            <div class="comment-form">
+                <textarea id="commentText" class="comment-textarea" 
+                          placeholder="이 뉴스에 대한 의견을 자유롭게 작성해주세요... (최대 500자)" 
+                          maxlength="500"></textarea>
+                <div style="text-align: right; color: #666; font-size: 0.8rem; margin-top: 5px;">
+                    <span id="charCount">0</span>/500
+                </div>
+                
+                <button id="submitComment" class="submit-comment-btn" onclick="submitComment()">
+                    의견 제출
+                </button>
+            </div>
+            
+            <div id="alertContainer"></div>
+            
+            <div class="comments-section">
+                <h4 style="margin-bottom: 15px; color: #182526;">다른 의견들</h4>
+                <div id="commentsList">
+                    <!-- 댓글들이 여기에 로드됩니다 -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Supabase 초기화 (실제 사용시 환경변수로 관리)
+        const SUPABASE_URL = 'YOUR_SUPABASE_URL';
+        const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
+        const RECAPTCHA_SITE_KEY = 'YOUR_RECAPTCHA_SITE_KEY';
+        
+        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        
+        // 전역 변수
+        let currentNewsId = null;
+        let userFingerprint = null;
+        let rateLimitData = {
+            count: 0,
+            lastReset: Date.now()
+        };
+        
+        // 초기화
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeApp();
+            loadAllReactionCounts();
+        });
+        
+        // 앱 초기화
+        function initializeApp() {
+            userFingerprint = generateFingerprint();
+            setupRateLimit();
+            setupReactionHandlers();
+            setupModalHandlers();
+            setupCharacterCounter();
+        }
+        
+        // 디바이스 핑거프린트 생성
+        function generateFingerprint() {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            ctx.textBaseline = 'top';
+            ctx.font = '14px Arial';
+            ctx.fillText('Fingerprint test', 2, 2);
+            
+            return btoa(
+                navigator.userAgent + 
+                screen.width + screen.height + 
+                new Date().getTimezoneOffset() +
+                navigator.language +
+                canvas.toDataURL()
+            ).substring(0, 50);
+        }
+        
+        // Rate Limiting 설정
+        function setupRateLimit() {
+            const stored = localStorage.getItem('miner7_rate_limit');
+            if (stored) {
+                rateLimitData = JSON.parse(stored);
+                // 1시간마다 리셋
+                if (Date.now() - rateLimitData.lastReset > 3600000) {
+                    rateLimitData = { count: 0, lastReset: Date.now() };
+                }
+            }
+        }
+        
+        // Rate Limit 체크
+        function checkRateLimit() {
+            if (rateLimitData.count >= 20) {
+                showAlert('요청 제한에 도달했습니다. 1시간 후 다시 시도해주세요.', 'error');
+                return false;
+            }
+            return true;
+        }
+        
+        // Rate Limit 업데이트
+        function updateRateLimit() {
+            rateLimitData.count++;
+            localStorage.setItem('miner7_rate_limit', JSON.stringify(rateLimitData));
+        }
+        
+        // 반응 버튼 핸들러 설정
+        function setupReactionHandlers() {
+            document.querySelectorAll('.reaction-btn[data-reaction]').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    if (!checkRateLimit()) return;
+                    
+                    const newsId = this.dataset.newsId;
+                    const reaction = this.dataset.reaction;
+                    submitReaction(newsId, reaction, this);
+                });
+            });
+        }
+        
+        // 반응 제출
+        async function submitReaction(newsId, reaction, buttonElement) {
+            // 허니팟 체크
+            if (document.querySelector('.honeypot').value) {
+                console.log('Bot detected');
+                return;
+            }
+            
+            // 버튼 비활성화
+            buttonElement.disabled = true;
+            const originalText = buttonElement.innerHTML;
+            buttonElement.innerHTML = '<div class="loading"></div>';
+            
+            try {
+                // reCAPTCHA 토큰 생성
+                const token = await grecaptcha.execute(RECAPTCHA_SITE_KEY, {action: 'reaction'});
+                
+                // 쿨다운 체크 (30초)
+                const lastAction = localStorage.getItem('last_reaction');
+                if (lastAction && Date.now() - parseInt(lastAction) < 30000) {
+                    showAlert('너무 빠른 요청입니다. 30초 후 다시 시도해주세요.', 'warning');
+                    return;
+                }
+                
+                // Supabase에 저장
+                const { data, error } = await supabase
+                    .from('news_reactions')
+                    .insert([{
+                        news_id: newsId,
+                        reaction: reaction,
+                        ip_hash: btoa(userFingerprint).substring(0, 20),
+                        fingerprint: userFingerprint,
+                        recaptcha_token: token
+                    }]);
+                
+                if (error) {
+                    console.error('Error:', error);
+                    showAlert('반응을 저장하는 중 오류가 발생했습니다.', 'error');
+                } else {
+                    // 성공시 카운트 업데이트
+                    updateReactionCount(newsId, reaction, 1);
+                    updateRateLimit();
+                    localStorage.setItem('last_reaction', Date.now().toString());
+                    
+                    // 버튼 활성화 표시
+                    buttonElement.classList.add('active');
+                    
+                    showAlert('반응이 저장되었습니다!', 'success');
+                }
+                
+            } catch (error) {
+                console.error('Error:', error);
+                showAlert('네트워크 오류가 발생했습니다.', 'error');
+            } finally {
+                // 버튼 복원
+                buttonElement.disabled = false;
+                buttonElement.innerHTML = originalText;
+            }
+        }
+        
+        // 반응 카운트 업데이트
+        function updateReactionCount(newsId, reaction, increment) {
+            const selector = `.reaction-btn[data-news-id="${newsId}"][data-reaction="${reaction}"] .count`;
+            const countElement = document.querySelector(selector);
+            if (countElement) {
+                const currentCount = parseInt(countElement.textContent) || 0;
+                countElement.textContent = currentCount + increment;
+            }
+        }
+        
+        // 모든 반응 카운트 로드
+        async function loadAllReactionCounts() {
+            try {
+                const { data, error } = await supabase
+                    .from('news_reactions')
+                    .select('news_id, reaction')
+                    .order('created_at', { ascending: false });
+                
+                if (!error && data) {
+                    // 카운트 집계
+                    const counts = {};
+                    data.forEach(item => {
+                        const key = `${item.news_id}-${item.reaction}`;
+                        counts[key] = (counts[key] || 0) + 1;
+                    });
+                    
+                    // UI 업데이트
+                    Object.entries(counts).forEach(([key, count]) => {
+                        const [newsId, reaction] = key.split('-');
+                        const selector = `.reaction-btn[data-news-id="${newsId}"][data-reaction="${reaction}"] .count`;
+                        const element = document.querySelector(selector);
+                        if (element) {
+                            element.textContent = count;
+                        }
+                    });
+                }
+            } catch (error) {
+                console.error('Error loading reaction counts:', error);
+            }
+        }
+        
+        // 댓글 모달 열기
+        function openCommentModal(newsId) {
+            currentNewsId = newsId;
+            document.getElementById('commentModal').style.display = 'block';
+            document.getElementById('commentText').value = '';
+            document.getElementById('charCount').textContent = '0';
+            loadComments(newsId);
+        }
+        
+        // 댓글 모달 닫기
+        function closeCommentModal() {
+            document.getElementById('commentModal').style.display = 'none';
+            currentNewsId = null;
+        }
+        
+        // 모달 핸들러 설정
+        function setupModalHandlers() {
+            // 모달 외부 클릭시 닫기
+            window.onclick = function(event) {
+                const modal = document.getElementById('commentModal');
+                if (event.target === modal) {
+                    closeCommentModal();
+                }
+            }
+        }
+        
+        // 글자수 카운터 설정
+        function setupCharacterCounter() {
+            const textarea = document.getElementById('commentText');
+            const charCount = document.getElementById('charCount');
+            
+            textarea.addEventListener('input', function() {
+                charCount.textContent = this.value.length;
+            });
+        }
+        
+        // 댓글 제출
+        async function submitComment() {
+            if (!checkRateLimit()) return;
+            
+            const commentText = document.getElementById('commentText').value.trim();
+            
+            if (!commentText) {
+                showAlert('의견을 입력해주세요.', 'warning');
+                return;
+            }
+            
+            if (commentText.length > 500) {
+                showAlert('의견은 500자 이내로 작성해주세요.', 'warning');
+                return;
+            }
+            
+            // 허니팟 체크
+            if (document.querySelector('.honeypot').value) {
+                console.log('Bot detected');
+                return;
+            }
+            
+            const submitBtn = document.getElementById('submitComment');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<div class="loading"></div> 제출 중...';
+            
+            try {
+                // reCAPTCHA 토큰 생성
+                const token = await grecaptcha.execute(RECAPTCHA_SITE_KEY, {action: 'comment'});
+                
+                // 쿨다운 체크 (60초)
+                const lastComment = localStorage.getItem('last_comment');
+                if (lastComment && Date.now() - parseInt(lastComment) < 60000) {
+                    showAlert('너무 빠른 요청입니다. 1분 후 다시 시도해주세요.', 'warning');
+                    return;
+                }
+                
+                // 스팸 키워드 체크
+                if (containsSpam(commentText)) {
+                    showAlert('적절하지 않은 내용이 포함되어 있습니다.', 'warning');
+                    return;
+                }
+                
+                // Supabase에 저장
+                const { data, error } = await supabase
+                    .from('news_comments')
+                    .insert([{
+                        news_id: currentNewsId,
+                        comment: commentText,
+                        ip_hash: btoa(userFingerprint).substring(0, 20),
+                        fingerprint: userFingerprint,
+                        recaptcha_token: token
+                    }]);
+                
+                if (error) {
+                    console.error('Error:', error);
+                    showAlert('의견을 저장하는 중 오류가 발생했습니다.', 'error');
+                } else {
+                    showAlert('의견이 저장되었습니다!', 'success');
+                    document.getElementById('commentText').value = '';
+                    document.getElementById('charCount').textContent = '0';
+                    updateRateLimit();
+                    localStorage.setItem('last_comment', Date.now().toString());
+                    loadComments(currentNewsId);
+                }
+                
+            } catch (error) {
+                console.error('Error:', error);
+                showAlert('네트워크 오류가 발생했습니다.', 'error');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '의견 제출';
+            }
+        }
+        
+        // 댓글 로드
+        async function loadComments(newsId) {
+            try {
+                const { data, error } = await supabase
+                    .from('news_comments')
+                    .select('comment, created_at')
+                    .eq('news_id', newsId)
+                    .eq('is_approved', true)
+                    .order('created_at', { ascending: false })
+                    .limit(10);
+                
+                const commentsList = document.getElementById('commentsList');
+                
+                if (!error && data && data.length > 0) {
+                    commentsList.innerHTML = data.map(comment => `
+                        <div class="comment-item">
+                            <div class="comment-date">${formatDate(comment.created_at)}</div>
+                            <div>${escapeHtml(comment.comment)}</div>
+                        </div>
+                    `).join('');
+                } else {
+                    commentsList.innerHTML = '<div style="text-align: center; color: #666; padding: 20px;">아직 의견이 없습니다.</div>';
+                }
+            } catch (error) {
+                console.error('Error loading comments:', error);
+                document.getElementById('commentsList').innerHTML = '<div style="text-align: center; color: #f44336; padding: 20px;">댓글을 불러오는 중 오류가 발생했습니다.</div>';
+            }
+        }
+        
+        // 스팸 키워드 체크
+        function containsSpam(text) {
+            const spamKeywords = ['스팸', '광고', '홍보', '카지노', '도박', '대출', '비아그라'];
+            const lowerText = text.toLowerCase();
+            return spamKeywords.some(keyword => lowerText.includes(keyword));
+        }
+        
+        // HTML 이스케이프
+        function escapeHtml(text) {
+            const map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;'
+            };
+            return text.replace(/[&<>"']/g, function(m) { return map[m]; });
+        }
+        
+        // 날짜 포맷
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            const now = new Date();
+            const diffMs = now - date;
+            const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
+            const diffDays = Math.floor(diffHours / 24);
+            
+            if (diffDays > 0) {
+                return `${diffDays}일 전`;
+            } else if (diffHours > 0) {
+                return `${diffHours}시간 전`;
+            } else {
+                return '방금 전';
+            }
+        }
+        
+        // 알림 메시지 표시
+        function showAlert(message, type = 'info') {
+            const alertContainer = document.getElementById('alertContainer');
+            const alertElement = document.createElement('div');
+            alertElement.className = `alert ${type}`;
+            alertElement.textContent = message;
+            
+            alertContainer.innerHTML = '';
+            alertContainer.appendChild(alertElement);
+            
+            // 3초 후 자동 제거
+            setTimeout(() => {
+                if (alertElement.parentNode) {
+                    alertElement.parentNode.removeChild(alertElement);
+                }
+            }, 3000);
+        }
+        
+        // 페이지 언로드시 정리
+        window.addEventListener('beforeunload', function() {
+            localStorage.setItem('miner7_rate_limit', JSON.stringify(rateLimitData));
+        });
+        
+    </script>
+</body>
+</html>
