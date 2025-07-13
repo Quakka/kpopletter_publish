@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miner7 Newsletter by AI  - 2025년 07월 09일</title>
+    <title>Miner7 Newsletter by AI - 2025-07-13</title>
     <link rel="icon" type="image/png" href="favicon_2_Miner7.png">
     <link rel="apple-touch-icon" href="favicon_2_Miner7.png">
     
@@ -36,7 +36,7 @@
             color: #182526;
             background: #efede2;
             min-height: 100vh;
-            padding: 20px;
+            padding: 30px 20px 20px 20px;
             /* 한국어 폰트 렌더링 최적화 */
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -79,40 +79,14 @@
             gap: 20px;
         }
         .header-logo {
-            position: absolute;
-            top: -20px;
-            left: 50%;
-            transform: translateX(-50%);
+            position: relative;
+            margin: 0 auto 20px auto;
             width: 80px;
             height: 80px;
-            border-radius: 50%;
-            background: white;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 6px 16px rgba(0,0,0,0.3);
             z-index: 3;
-            border: 3px solid #efede2;
-        }
-        
-        /* 모바일에서 로고 크기 조정 */
-        @media (max-width: 768px) {
-            .header-logo {
-                width: 50px;
-                height: 50px;
-                top: -15px;
-                border: 2px solid #efede2;
-            }
-        }
-        
-        /* 태블릿에서 로고 크기 조정 */
-        @media (max-width: 1024px) and (min-width: 769px) {
-            .header-logo {
-                width: 65px;
-                height: 65px;
-                top: -18px;
-                border: 2px solid #efede2;
-            }
         }
         .header-title {
             font-size: 2.5rem;
@@ -127,7 +101,7 @@
         
         /* 메인 컨텐츠 영역 */
         .main-content {
-            padding: 40px;
+            padding: 45px;
             background: #efede2;
         }
         
@@ -141,10 +115,10 @@
         
         /* 주요 뉴스 섹션 */
         .major-section {
-            background: #efede2;
-            border-radius: 16px;
-            padding: 30px;
-            box-shadow: 4px 4px 12px rgba(24,37,38,0.15);
+            background: #f8f7f2;
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 8px 25px rgba(24,37,38,0.08);
         }
         
         .section-title {
@@ -164,10 +138,10 @@
         }
         
         .news-card {
-            background: #efede2;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 4px 4px 12px rgba(24,37,38,0.15);
+            background: #f8f7f2;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 6px 20px rgba(24,37,38,0.08);
             transition: all 0.3s ease;
             cursor: pointer;
             position: relative;
@@ -175,47 +149,6 @@
             display: flex;
             gap: 20px;
             align-items: flex-start;
-        }
-        
-        /* 모바일 및 화면 크기에 따른 반응형 레이아웃 */
-        @media (max-width: 768px) {
-            .news-card {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .news-thumbnail {
-                width: 100%;
-                height: 200px;
-                order: -1;
-            }
-            
-            .news-content {
-                order: 1;
-            }
-            
-            .news-summary {
-                -webkit-line-clamp: 4;
-                padding: 12px;
-            }
-        }
-        
-        /* 중간 크기 화면 (태블릿) */
-        @media (max-width: 1024px) and (min-width: 769px) {
-            .news-card {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .news-thumbnail {
-                width: 100%;
-                height: 180px;
-                order: -1;
-            }
-            
-            .news-content {
-                order: 1;
-            }
         }
         
         .news-thumbnail {
@@ -251,8 +184,8 @@
         }
         
         .news-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 6px 6px 20px rgba(24,37,38,0.25);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(24,37,38,0.15);
         }
         
         .news-card::before {
@@ -281,12 +214,12 @@
         
         /* 주요 지역 뉴스 섹션 차별화 */
         .major-section .news-card {
-            background: #efede2;
+            background: #f8f7f2;
         }
         
         /* 기타 지역 뉴스 섹션 차별화 */
         .other-section .news-card {
-            background: #e8e6db;
+            background: #f5f4ef;
         }
         
         .news-title {
@@ -307,13 +240,16 @@
             line-height: 1.6;
             margin-bottom: 20px;
             display: -webkit-box;
-            -webkit-line-clamp: 6;
+            -webkit-line-clamp: 4;
             -webkit-box-orient: vertical;
             overflow: hidden;
-            background: #efede2;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: -3px 0 0 #b1a798, 2px 2px 6px rgba(24,37,38,0.1);
+            background: #f8f7f2;
+            padding: 20px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            min-height: 80px;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(24,37,38,0.08);
         }
         
         .news-meta {
@@ -325,21 +261,38 @@
         }
         
         .news-link {
-            color: #182526;
+            color: rgba(24, 37, 38, 0.7);
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 400;
+            transition: all 0.3s ease;
+            padding: 4px 8px;
+            border-radius: 6px;
+            background: rgba(177, 167, 152, 0.05);
         }
         
         .news-link:hover {
-            text-decoration: underline;
+            color: rgba(24, 37, 38, 0.9);
+            background: rgba(177, 167, 152, 0.15);
+            text-decoration: none;
+        }
+        
+        /* 심층 분석 섹션의 원문 보기 링크 스타일 */
+        .deep-section .news-link {
+            color: rgba(239, 237, 226, 0.9);
+            background: rgba(177, 167, 152, 0.2);
+        }
+        
+        .deep-section .news-link:hover {
+            color: #efede2;
+            background: rgba(177, 167, 152, 0.3);
         }
         
         /* 기타 뉴스 섹션 */
         .other-section {
-            background: #efede2;
-            border-radius: 16px;
-            padding: 30px;
-            box-shadow: 4px 4px 12px rgba(24,37,38,0.15);
+            background: #f8f7f2;
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 8px 25px rgba(24,37,38,0.08);
         }
         
         /* 심층 분석 섹션 */
@@ -377,6 +330,16 @@
         
         .deep-section .news-meta {
             color: #b1a798;
+        }
+        
+        .deep-section .news-link {
+            color: rgba(239, 237, 226, 0.7);
+            background: rgba(177, 167, 152, 0.2);
+        }
+        
+        .deep-section .news-link:hover {
+            color: rgba(239, 237, 226, 0.9);
+            background: rgba(177, 167, 152, 0.3);
         }
         
         /* 심층 분석 특별 레이아웃 */
@@ -420,10 +383,10 @@
         
         /* 태그 섹션 */
         .tags-section {
-            background: #efede2;
-            border-radius: 16px;
-            padding: 30px;
-            box-shadow: 4px 4px 12px rgba(24,37,38,0.15);
+            background: #f8f7f2;
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 8px 25px rgba(24,37,38,0.08);
             margin-top: 30px;
         }
         
@@ -434,18 +397,19 @@
         }
         
         .tag {
-            background: #efede2;
+            background: #ffffff;
             color: #182526;
-            padding: 8px 16px;
-            border-radius: 20px;
+            padding: 10px 18px;
+            border-radius: 25px;
             font-size: 0.9rem;
             font-weight: 500;
-            transition: transform 0.2s ease;
-            box-shadow: 2px 2px 6px rgba(24,37,38,0.1);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(24,37,38,0.08);
         }
         
         .tag:hover {
-            transform: scale(1.05);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(24,37,38,0.15);
         }
         
         /* 푸터 */
@@ -474,7 +438,7 @@
         /* 반응형 디자인 - 모바일 최적화 */
         @media (max-width: 768px) {
             body {
-                padding: 10px;
+                padding: 20px 10px 10px 10px;
                 font-size: 14px;
             }
             
@@ -498,9 +462,9 @@
             }
             
             .header-logo {
-                width: 60px;
-                height: 60px;
-                top: -15px;
+                width: 50px;
+                height: 50px;
+                margin: 0 auto 15px auto;
             }
             
             .main-content {
@@ -514,7 +478,7 @@
             .news-card {
                 flex-direction: column;
                 gap: 15px;
-                padding: 15px;
+                padding: 20px;
             }
             
             .news-thumbnail {
@@ -534,8 +498,35 @@
             
             .news-summary {
                 font-size: 0.9rem;
-                -webkit-line-clamp: 3;
-                padding: 12px;
+                -webkit-line-clamp: 6;
+                padding: 15px;
+                min-height: 100px;
+            }
+            
+            /* 동적 뉴스 요약 박스 - 화면 크기별 적응 */
+            @media (max-width: 480px) {
+                .news-summary {
+                    font-size: 0.85rem;
+                    -webkit-line-clamp: 8;
+                    padding: 10px;
+                    min-height: 120px;
+                }
+            }
+            
+            @media (min-width: 481px) and (max-width: 768px) {
+                .news-summary {
+                    font-size: 0.9rem;
+                    -webkit-line-clamp: 7;
+                    padding: 12px;
+                    min-height: 110px;
+                }
+            }
+            
+            @media (min-width: 1024px) {
+                .news-summary {
+                    -webkit-line-clamp: 5;
+                    min-height: 90px;
+                }
             }
             
             .news-meta {
@@ -595,7 +586,7 @@
             }
             
             .major-section, .other-section, .deep-section {
-                padding: 20px;
+                padding: 25px;
                 margin-bottom: 20px;
             }
             
@@ -613,7 +604,7 @@
             }
         }
         
-        /* 모달 스타일 */
+        /* 모달 스타일 - 모바일 최적화 */
         .modal {
             display: none;
             position: fixed;
@@ -637,6 +628,9 @@
             overflow-y: auto;
             position: relative;
             box-shadow: 0 20px 40px rgba(24,37,38,0.3);
+            /* 모바일 터치 최적화 */
+            touch-action: manipulation;
+            -webkit-overflow-scrolling: touch;
         }
         
         .close-modal {
@@ -659,6 +653,11 @@
             touch-action: manipulation;
         }
         
+        .close-modal:hover {
+            color: #182526;
+            background: rgba(239, 237, 226, 1);
+        }
+        
         @media (max-width: 768px) {
             .modal-content {
                 margin: 2% auto;
@@ -675,10 +674,44 @@
                 top: 10px;
                 right: 10px;
             }
-        }
-        
-        .close-modal:hover {
-            color: #182526;
+            
+            /* 모바일 모달에서 썸네일과 콘텐츠 세로 배치 */
+            .modal-content .news-card {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+            }
+            
+            .modal-content .news-thumbnail {
+                width: 100%;
+                height: 180px;
+                order: -1;
+                border-radius: 8px;
+                margin-bottom: 10px;
+            }
+            
+            .modal-content .news-content {
+                order: 1;
+            }
+            
+            /* 모바일에서 개선된 텍스트 가독성 */
+            .modal-content .news-title {
+                font-size: 1.1rem;
+                line-height: 1.3;
+                margin-bottom: 10px;
+            }
+            
+            .modal-content .news-summary {
+                font-size: 0.9rem;
+                line-height: 1.4;
+            }
+            
+            /* 작은 화면에서 썸네일 높이 조정 */
+            @media (max-width: 480px) {
+                .modal-content .news-thumbnail {
+                    height: 140px;
+                }
+            }
         }
         
         /* 트렌딩 뉴스 스타일 */
@@ -786,49 +819,46 @@
             background: none;
             border: none;
             cursor: pointer;
-            font-size: 16px;
-            padding: 3px 6px;
+            font-size: 18px;
+            padding: 6px;
             border-radius: 6px;
             transition: all 0.3s ease;
             display: flex;
             align-items: center;
-            gap: 4px;
+            justify-content: center;
             color: #b1a798;
         }
         
         .reaction-btn:hover {
-            transform: scale(1.05);
+            transform: scale(1.1);
             background: rgba(177, 167, 152, 0.1);
         }
         
         .reaction-btn.active {
-            color: #182526;
-            transform: scale(1.05);
-            background: rgba(177, 167, 152, 0.2);
+            background: rgba(24, 37, 38, 0.1);
+            transform: scale(1.1);
         }
         
-        .reaction-btn .count {
-            font-size: 12px;
-            font-weight: 500;
-            color: #182526;
+        .reaction-btn.active svg {
+            fill: #182526;
         }
         
         /* 의견 섹션 스타일 */
         .feedback-section {
-            margin: 40px 0;
-            padding: 30px;
-            background: rgba(177, 167, 152, 0.1);
-            border-radius: 16px;
-            border: 1px solid rgba(177, 167, 152, 0.3);
-            box-shadow: 0 4px 12px rgba(24, 37, 38, 0.1);
+            margin: 25px 0;
+            padding: 15px;
+            background: rgba(177, 167, 152, 0.08);
+            border-radius: 10px;
+            border: 1px solid rgba(177, 167, 152, 0.2);
+            box-shadow: 0 2px 8px rgba(24, 37, 38, 0.08);
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            gap: 20px;
+            justify-content: center;
+            gap: 12px;
         }
         
         .feedback-title {
-            font-size: 1.1rem;
+            font-size: 0.9rem;
             color: #182526;
             font-weight: 500;
             margin: 0;
@@ -838,16 +868,16 @@
             background: linear-gradient(135deg, #b1a798, #182526);
             color: #efede2;
             border: none;
-            padding: 12px 20px;
-            border-radius: 8px;
+            padding: 8px 16px;
+            border-radius: 6px;
             cursor: pointer;
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             font-weight: 500;
             transition: all 0.3s ease;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            box-shadow: 0 2px 8px rgba(24, 37, 38, 0.2);
+            gap: 6px;
+            box-shadow: 0 2px 6px rgba(24, 37, 38, 0.15);
         }
         
         .feedback-button:hover {
@@ -899,7 +929,7 @@
 <body>
     <!-- 로고 (박스 위에 별도 배치) -->
     <div class="header-logo">
-        <img src="Logo_Miner7_Final.png" alt="Miner7 Logo" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
+        <img src="Logo_Miner7_Final.png" alt="Miner7 Logo" style="width: 80px; height: 80px; object-fit: cover;">
     </div>
     
     <div class="newsletter-container">
@@ -908,7 +938,7 @@
             <div class="header-content">
                 <div>
                     <h1 class="header-title">Miner7 Newsletter by AI</h1>
-                    <p class="header-subtitle">2025년 07월 09일 | Today's 7 hidden gems</p>
+                    <p class="header-subtitle">2025-07-13 | Today's 7 hidden gems</p>
                 </div>
             </div>
         </header>
@@ -924,111 +954,105 @@
         <span>[CHART]</span>
     </div>
     
-            <div class="impact-item">
+            <div class="impact-item" onclick="openModal('modal-trending-1')" style="cursor: pointer;">
                 <div class="impact-rank">1</div>
                 <div class="impact-content">
-                    <div class="impact-title">SOL 선물 자금 조달 금리가 마이너스로 전환되었습니다. 다음 목표가는 180달러일까요?</div>
+                    <div class="impact-title">트럼프, 멕시코와 EU에 30% 관세 부과, 무역 전쟁 격화.</div>
                     <div style="display: flex; align-items: center; gap: 15px; margin-top: 8px;">
                         <div class="impact-link">
-                            <a href="https://cointelegraph.com/news/sol-futures-funding-rate-turns-negative-is-180-the-next-stop?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" target="_blank">🔗 원문 보기</a>
+                            <a href="https://www.scmp.com/news/us/economy-trade-business/article/3318000/trump-trade-war-escalates-30-tariffs-eu-mexico?utm_source=rss_feed" target="_blank">🔗 원문 보기</a>
                         </div>
-                        <span style="color: #636e72; font-size: 0.85em;">⏰ 50분 전</span>
+                        <span style="color: #636e72; font-size: 0.85em;">⏰ 0분 전</span>
                     </div>
                 </div>
                 <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
                     <div style="display: flex; align-items: center; gap: 8px;">
                         <div class="reaction-buttons">
                             <button class="reaction-btn" data-news-id="trending-1" data-reaction="like" onclick="handleReaction(event, 'trending-1', 'like')">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#b1a798">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="#b1a798">
                                     <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558-.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"/>
                                 </svg>
-                                <span class="count">0</span>
                             </button>
                             <button class="reaction-btn" data-news-id="trending-1" data-reaction="dislike" onclick="handleReaction(event, 'trending-1', 'dislike')">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#b1a798" style="transform: rotate(180deg);">
-                                    <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558-.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"/>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="#b1a798" style="transform: rotate(180deg);">
+                                    <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 712.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558-.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"/>
                                 </svg>
-                                <span class="count">0</span>
                             </button>
                         </div>
-                        <div style="display: flex; align-items: center; gap: 4px; font-size: 0.75em; background: linear-gradient(135deg, #f39c12, #e67e22); color: white; font-weight: bold; padding: 4px 8px; border-radius: 12px; white-space: nowrap;">
-                            <span>📈</span>
-                            <span>트렌딩</span>
+                        <div style="display: flex; align-items: center; gap: 4px; font-size: 0.75em; background: linear-gradient(135deg, #95a5a6, #7f8c8d); color: white; padding: 4px 8px; border-radius: 12px; white-space: nowrap;">
+                            <span>📰</span>
+                            <span>일반</span>
                         </div>
                     </div>
-                    <span style="color: #636e72; font-size: 0.7em; font-weight: bold;">13.8점</span>
+                    <span style="color: #636e72; font-size: 0.7em; font-weight: bold;">0.0점</span>
                 </div>
             </div>
             
-            <div class="impact-item">
+            <div class="impact-item" onclick="openModal('modal-trending-2')" style="cursor: pointer;">
                 <div class="impact-rank">2</div>
                 <div class="impact-content">
-                    <div class="impact-title">아시아 시장은 트럼프 대통령의 강경 입장 지속에 신중한 개장을 준비하고 있습니다: 시장 동향 정리.</div>
+                    <div class="impact-title">트럼프 전 대통령의 영국 상품 대부분에 대한 10% 관세는 '계속 유지될 것'이라고 만델슨 경이 밝혔다.</div>
                     <div style="display: flex; align-items: center; gap: 15px; margin-top: 8px;">
                         <div class="impact-link">
-                            <a href="https://www.bloomberg.com/news/articles/2025-07-08/stock-market-today-dow-s-p-live-updates" target="_blank">🔗 원문 보기</a>
+                            <a href="https://www.theguardian.com/us-news/2025/jul/12/trumps-10-tariff-on-most-uk-goods-here-to-stay-says-lord-mandelson" target="_blank">🔗 원문 보기</a>
                         </div>
-                        <span style="color: #636e72; font-size: 0.85em;">⏰ 55분 전</span>
+                        <span style="color: #636e72; font-size: 0.85em;">⏰ 0분 전</span>
                     </div>
                 </div>
                 <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
                     <div style="display: flex; align-items: center; gap: 8px;">
                         <div class="reaction-buttons">
                             <button class="reaction-btn" data-news-id="trending-2" data-reaction="like" onclick="handleReaction(event, 'trending-2', 'like')">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#b1a798">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="#b1a798">
                                     <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558-.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"/>
                                 </svg>
-                                <span class="count">0</span>
                             </button>
                             <button class="reaction-btn" data-news-id="trending-2" data-reaction="dislike" onclick="handleReaction(event, 'trending-2', 'dislike')">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#b1a798" style="transform: rotate(180deg);">
-                                    <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558-.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"/>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="#b1a798" style="transform: rotate(180deg);">
+                                    <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 712.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558-.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"/>
                                 </svg>
-                                <span class="count">0</span>
                             </button>
                         </div>
-                        <div style="display: flex; align-items: center; gap: 4px; font-size: 0.75em; background: linear-gradient(135deg, #3498db, #2980b9); color: white; padding: 4px 8px; border-radius: 12px; white-space: nowrap;">
-                            <span>⭐</span>
-                            <span>주목</span>
+                        <div style="display: flex; align-items: center; gap: 4px; font-size: 0.75em; background: linear-gradient(135deg, #95a5a6, #7f8c8d); color: white; padding: 4px 8px; border-radius: 12px; white-space: nowrap;">
+                            <span>📰</span>
+                            <span>일반</span>
                         </div>
                     </div>
-                    <span style="color: #636e72; font-size: 0.7em; font-weight: bold;">11.5점</span>
+                    <span style="color: #636e72; font-size: 0.7em; font-weight: bold;">0.0점</span>
                 </div>
             </div>
             
-            <div class="impact-item">
+            <div class="impact-item" onclick="openModal('modal-trending-3')" style="cursor: pointer;">
                 <div class="impact-rank">3</div>
                 <div class="impact-content">
-                    <div class="impact-title">관세가 미국 경제의 가장 큰 문제인 이유.</div>
+                    <div class="impact-title">영국 의원들이 라미 외무장관에게 팔레스타인 국가를 승인할 것을 촉구합니다.</div>
                     <div style="display: flex; align-items: center; gap: 15px; margin-top: 8px;">
                         <div class="impact-link">
-                            <a href="https://www.bloomberg.com/news/videos/2025-07-08/why-tariffs-are-the-biggest-issue-for-the-us-economy-video" target="_blank">🔗 원문 보기</a>
+                            <a href="https://www.aljazeera.com/news/2025/7/12/uk-lawmakers-urge-foreign-secretary-lammy-to-recognise-palestinian-state?traffic_source=rss" target="_blank">🔗 원문 보기</a>
                         </div>
-                        <span style="color: #636e72; font-size: 0.85em;">⏰ 50분 전</span>
+                        <span style="color: #636e72; font-size: 0.85em;">⏰ 0분 전</span>
                     </div>
                 </div>
                 <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
                     <div style="display: flex; align-items: center; gap: 8px;">
                         <div class="reaction-buttons">
                             <button class="reaction-btn" data-news-id="trending-3" data-reaction="like" onclick="handleReaction(event, 'trending-3', 'like')">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#b1a798">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="#b1a798">
                                     <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558-.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"/>
                                 </svg>
-                                <span class="count">0</span>
                             </button>
                             <button class="reaction-btn" data-news-id="trending-3" data-reaction="dislike" onclick="handleReaction(event, 'trending-3', 'dislike')">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#b1a798" style="transform: rotate(180deg);">
-                                    <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558-.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"/>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="#b1a798" style="transform: rotate(180deg);">
+                                    <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 712.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558-.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"/>
                                 </svg>
-                                <span class="count">0</span>
                             </button>
                         </div>
-                        <div style="display: flex; align-items: center; gap: 4px; font-size: 0.75em; background: linear-gradient(135deg, #3498db, #2980b9); color: white; padding: 4px 8px; border-radius: 12px; white-space: nowrap;">
-                            <span>⭐</span>
-                            <span>주목</span>
+                        <div style="display: flex; align-items: center; gap: 4px; font-size: 0.75em; background: linear-gradient(135deg, #95a5a6, #7f8c8d); color: white; padding: 4px 8px; border-radius: 12px; white-space: nowrap;">
+                            <span>📰</span>
+                            <span>일반</span>
                         </div>
                     </div>
-                    <span style="color: #636e72; font-size: 0.7em; font-weight: bold;">10.5점</span>
+                    <span style="color: #636e72; font-size: 0.7em; font-weight: bold;">0.0점</span>
                 </div>
             </div>
             
@@ -1039,40 +1063,38 @@
             <section class="major-section">
                 <h2 class="section-title">
                     <span>🌍</span>
-                    <span>주요 지역 뉴스 (3개)</span>
+                    <span>주요 지역 뉴스 (2개)</span>
                 </h2>
                 <div class="news-cards">
                     
             <div class="news-card" onclick="openModal('modal-major-1')">
                 
                 <div class="news-thumbnail has-image" 
-                     style="background-image: url('https://images.unsplash.com/photo-1612178991541-b48cc8e92a4d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzA2MDh8MHwxfHNlYXJjaHw5fHxzdG9jayUyMG1hcmtldCUyMHRyYWRpbmd8ZW58MXwwfHx8MTc1MTk1MjM1MXww&ixlib=rb-4.1.0&q=80&w=400');">
+                     style="background-image: url('https://images.unsplash.com/photo-1738566061688-47e66a008254?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzA2MDh8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBwcm9mZXNzaW9uYWx8ZW58MXwwfHx8MTc1MjM0NTA4OHww&ixlib=rb-4.1.0&q=80&w=400');">
                 </div>
                 <div class="news-content">
                     <div class="region-badge">
-                        <span>[US]</span>
-                        <span>미국</span>
+                        <span>🌍</span>
+                        <span>글로벌</span>
                     </div>
-                    <h3 class="news-title">아시아 시장은 트럼프 대통령의 강경 입장 지속에 신중한 개장을 준비하고 있습니다: 시장 동향 정리.</h3>
-                    <p class="news-summary">아시아 주식은 도널드 트럼프 대통령이 8월 관세 기한 연장을 거부하면서 월가의 부진한 흐름 이후 조심스러운 시작을 보일 것으로 예상된다. 미국 구리 가격은 대통령의 발언 후 급등했다.</p>
+                    <h3 class="news-title">세계는 중국의 커져가는 경제력에 대해 그 어느 때보다 경계해야 한다.</h3>
+                    <p class="news-summary">독재 정권은 세계 무대에서 악의적인 행위자이며, 다른 국가들의 경제 자원을 약화시키려는 노력은 제한되어야 한다. 중국은 도널드 트럼프의 경제 정책에 맞서기 위해 가능한 모든 수단을 동원하고 있다.</p>
                     <div class="news-meta">
-                        <span>📅 2025-07-09T08:47:25.172586</span>
+                        <span>📅 2025-07-13 11:49</span>
                         <div style="display: flex; align-items: center; gap: 10px;">
                             <div class="reaction-buttons">
                                 <button class="reaction-btn" data-news-id="major-1" data-reaction="like" onclick="handleReaction(event, 'major-1', 'like')">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="#b1a798">
                                         <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558-.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"/>
                                     </svg>
-                                    <span class="count">0</span>
                                 </button>
                                 <button class="reaction-btn" data-news-id="major-1" data-reaction="dislike" onclick="handleReaction(event, 'major-1', 'dislike')">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="#b1a798" style="transform: rotate(180deg);">
                                         <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558-.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"/>
                                     </svg>
-                                    <span class="count">0</span>
                                 </button>
                             </div>
-                            <a href="https://www.bloomberg.com/news/articles/2025-07-08/stock-market-today-dow-s-p-live-updates" target="_blank" class="news-link">🔗 원문 보기</a>
+                            <a href="https://www.theguardian.com/business/2025/jul/12/world-more-wary-china-growing-economic-powe" target="_blank" class="news-link">🔗 원문 보기</a>
                         </div>
                     </div>
                 </div>
@@ -1081,68 +1103,31 @@
             <div class="news-card" onclick="openModal('modal-major-2')">
                 
                 <div class="news-thumbnail has-image" 
-                     style="background-image: url('https://images.unsplash.com/photo-1576520804567-b88e5dade12d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzA2MDh8MHwxfHNlYXJjaHwxOXx8Yml0Y29pbiUyMGNyeXB0b2N1cnJlbmN5fGVufDF8MHx8fDE3NTIwMjA0OTR8MA&ixlib=rb-4.1.0&q=80&w=400');">
+                     style="background-image: url('https://images.unsplash.com/photo-1580584126903-c17d41830450?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzA2MDh8MHwxfHNlYXJjaHw0fHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwdGVjaG5vbG9neXxlbnwxfDB8fHwxNzUyMzQ1MDg4fDA&ixlib=rb-4.1.0&q=80&w=400');">
                 </div>
                 <div class="news-content">
                     <div class="region-badge">
-                        <span>[GLOBAL]</span>
+                        <span>🌍</span>
                         <span>글로벌</span>
                     </div>
-                    <h3 class="news-title">바이낸스에서 310억 달러 규모의 스테이블코인 급증으로 트레이더들의 알트시즌 기대감이 되살아났다.</h3>
-                    <p class="news-summary">바이낸스의 급증하는 스테이블코인 보유량, 비트코인의 하락하는 지배력, 그리고 강세 차트 패턴은 2025년 하반기에 알트시즌이 시작될 가능성을 시사합니다.</p>
+                    <h3 class="news-title">EU는 트럼프 대통령의 30% 관세 위협에 따라 무역 협상 해결 방안을 모색하는 데 비틀거릴 것이다.</h3>
+                    <p class="news-summary">블록은 이미 강경한 발언에서 최소한의 합의를 모색하는 쪽으로 입장을 번복했지만, 미국 대통령이 다시 판도를 뒤집었다. 도널드 트럼프를 추측하는 것은 어리석은 짓이다. 하지만 토요일의 충격적인 위협은 부과하려는... (채널: tough talk to seeking a bare bones deal – but US president has turned table...</p>
                     <div class="news-meta">
-                        <span>📅 2025-07-09T08:47:25.172612</span>
+                        <span>📅 2025-07-13 11:49</span>
                         <div style="display: flex; align-items: center; gap: 10px;">
                             <div class="reaction-buttons">
                                 <button class="reaction-btn" data-news-id="major-2" data-reaction="like" onclick="handleReaction(event, 'major-2', 'like')">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="#b1a798">
                                         <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558-.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"/>
                                     </svg>
-                                    <span class="count">0</span>
                                 </button>
                                 <button class="reaction-btn" data-news-id="major-2" data-reaction="dislike" onclick="handleReaction(event, 'major-2', 'dislike')">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="#b1a798" style="transform: rotate(180deg);">
                                         <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558-.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"/>
                                     </svg>
-                                    <span class="count">0</span>
                                 </button>
                             </div>
-                            <a href="https://cointelegraph.com/news/dollar31b-stablecoin-surge-at-binance-revives-traders-altseason-hopes?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" target="_blank" class="news-link">🔗 원문 보기</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="news-card" onclick="openModal('modal-major-3')">
-                
-                <div class="news-thumbnail has-image" 
-                     style="background-image: url('https://images.unsplash.com/photo-1621629057099-c7cf1fb8ca1e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzA2MDh8MHwxfHNlYXJjaHwxMnx8ZmluYW5jaWFsJTIwbWFya2V0JTIwZWNvbm9teXxlbnwxfDB8fHwxNzUxOTkzMjYzfDA&ixlib=rb-4.1.0&q=80&w=400');">
-                </div>
-                <div class="news-content">
-                    <div class="region-badge">
-                        <span>[GLOBAL]</span>
-                        <span>글로벌</span>
-                    </div>
-                    <h3 class="news-title">SOL 선물 자금 조달 금리가 마이너스로 전환되었습니다. 다음 목표가는 180달러일까요?</h3>
-                    <p class="news-summary">블록체인 경쟁 업체들과 기관 투자자들의 최근 결정들이 솔라나의 시장 점유율을 잠식하고 있습니다. 이것이 SOL 가격에 영향을 미칠까요? </p>
-                    <div class="news-meta">
-                        <span>📅 2025-07-09T08:47:25.172610</span>
-                        <div style="display: flex; align-items: center; gap: 10px;">
-                            <div class="reaction-buttons">
-                                <button class="reaction-btn" data-news-id="major-3" data-reaction="like" onclick="handleReaction(event, 'major-3', 'like')">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#b1a798">
-                                        <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558-.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"/>
-                                    </svg>
-                                    <span class="count">0</span>
-                                </button>
-                                <button class="reaction-btn" data-news-id="major-3" data-reaction="dislike" onclick="handleReaction(event, 'major-3', 'dislike')">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#b1a798" style="transform: rotate(180deg);">
-                                        <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558-.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"/>
-                                    </svg>
-                                    <span class="count">0</span>
-                                </button>
-                            </div>
-                            <a href="https://cointelegraph.com/news/sol-futures-funding-rate-turns-negative-is-180-the-next-stop?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" target="_blank" class="news-link">🔗 원문 보기</a>
+                            <a href="https://www.theguardian.com/world/2025/jul/12/eu-will-be-reeling-over-how-to-tackle-trade-talks-after-trumps-30-tariff-threat" target="_blank" class="news-link">🔗 원문 보기</a>
                         </div>
                     </div>
                 </div>
@@ -1155,40 +1140,38 @@
             <section class="other-section">
                 <h2 class="section-title">
                     <span>🌎</span>
-                    <span>기타 지역 뉴스 (2개)</span>
+                    <span>기타 지역 뉴스 (3개)</span>
                 </h2>
                 <div class="news-cards">
                     
             <div class="news-card" onclick="openModal('modal-other-1')">
                 
                 <div class="news-thumbnail has-image" 
-                     style="background-image: url('https://images.unsplash.com/photo-1516110833967-0b5716ca1387?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzA2MDh8MHwxfHNlYXJjaHwyfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwdGVjaG5vbG9neXxlbnwxfDB8fHwxNzUyMDIwNDk0fDA&ixlib=rb-4.1.0&q=80&w=400');">
+                     style="background-image: url('https://images.unsplash.com/photo-1746883741141-04859907ef5f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzA2MDh8MHwxfHNlYXJjaHwxOXx8YXJ0aWZpY2lhbCUyMGludGVsbGlnZW5jZSUyMHRlY2hub2xvZ3l8ZW58MXwwfHx8MTc1MjM0NTA4OHww&ixlib=rb-4.1.0&q=80&w=400');">
                 </div>
                 <div class="news-content">
                     <div class="region-badge">
-                        <span>[IN]</span>
-                        <span>인도</span>
+                        <span>🌍</span>
+                        <span>글로벌</span>
                     </div>
-                    <h3 class="news-title">타타 스틸 1분기 업데이트: 인도 생산량은 설비 중단으로 인해 전년 동기 대비 526만 톤으로 보합.</h3>
-                    <p class="news-summary">타타 스틸 인도의 조강 생산량은 1회계연도 2분기에 526만 톤으로 전년 동기 대비 보합세를 유지했지만, 잠셰드푸르와 NINL의 정비 중단으로 인해 판매량은 전년 동기 대비 4% 감소했습니다.</p>
+                    <h3 class="news-title">호주 앤서니 알바니즈, 지역 내 우려에도 불구하고 중국과의 무역 증진 위해 방문.</h3>
+                    <p class="news-summary">앤서니 알바니즈 호주 총리는 토요일 상하이에 도착해 중국을 두 번째 방문했다. 그는 지정학적 긴장이 지속되는 가운데 최근 안정화된 양국 무역 관계를 강화하고자 한다.</p>
                     <div class="news-meta">
-                        <span>📅 2025-07-09T08:47:25.172584</span>
+                        <span>📅 2025-07-13 11:49</span>
                         <div style="display: flex; align-items: center; gap: 10px;">
                             <div class="reaction-buttons">
                                 <button class="reaction-btn" data-news-id="other-1" data-reaction="like" onclick="handleReaction(event, 'other-1', 'like')">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="#b1a798">
                                         <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558-.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"/>
                                     </svg>
-                                    <span class="count">0</span>
                                 </button>
                                 <button class="reaction-btn" data-news-id="other-1" data-reaction="dislike" onclick="handleReaction(event, 'other-1', 'dislike')">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="#b1a798" style="transform: rotate(180deg);">
                                         <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558-.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"/>
                                     </svg>
-                                    <span class="count">0</span>
                                 </button>
                             </div>
-                            <a href="https://economictimes.indiatimes.com/markets/stocks/news/tata-steel-q1-updates-india-production-flat-yoy-at-5-26-million-tons-on-plant-shutdowns/articleshow/122322357.cms" target="_blank" class="news-link">🔗 원문 보기</a>
+                            <a href="https://hongkongfp.com/2025/07/13/australias-anthony-albanese-in-china-to-boost-trade-despite-regional-angst/" target="_blank" class="news-link">🔗 원문 보기</a>
                         </div>
                     </div>
                 </div>
@@ -1197,33 +1180,64 @@
             <div class="news-card" onclick="openModal('modal-other-2')">
                 
                 <div class="news-thumbnail has-image" 
-                     style="background-image: url('https://images.unsplash.com/photo-1655393001768-d946c97d6fd1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzA2MDh8MHwxfHNlYXJjaHw2fHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwdGVjaG5vbG9neXxlbnwxfDB8fHwxNzUyMDIwNDk0fDA&ixlib=rb-4.1.0&q=80&w=400');">
+                     style="background-image: url('https://images.unsplash.com/photo-1620778185674-ad6058ab908b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzA2MDh8MHwxfHNlYXJjaHw3fHxjcnlwdG9jdXJyZW5jeSUyMGRpZ2l0YWwlMjBjdXJyZW5jeXxlbnwxfDB8fHwxNzUyMzkzNzQ2fDA&ixlib=rb-4.1.0&q=80&w=400');">
                 </div>
                 <div class="news-content">
                     <div class="region-badge">
-                        <span>[US]</span>
-                        <span>미국</span>
+                        <span>🌍</span>
+                        <span>글로벌</span>
                     </div>
-                    <h3 class="news-title">트럼프 대통령, 막대한 구리 관세 및 파괴적인 의약품 세금 부과 예고.</h3>
-                    <p class="news-summary">미국 대통령은 미국 구리 수입에 대해 50%의 관세를, 의약품에 대해서는 200%의 관세를 부과할 계획이라고 밝혔습니다.</p>
+                    <h3 class="news-title">이더리움 가격, 거부 후 50EMA 돌파. ETH 지배력 회복세 보임.</h3>
+                    <p class="news-summary">이더리움 가격이 다시 상승 모멘텀을 얻고 있으며 새로운 고점을 향해 나아갈 것으로 보인다. 암호화폐 분석가 닥터 프로핏은 알트코인이 중요한 이동 평균을 돌파했다는 점에 대해 언급했다.</p>
                     <div class="news-meta">
-                        <span>📅 2025-07-09T08:47:25.172578</span>
+                        <span>📅 2025-07-13 11:49</span>
                         <div style="display: flex; align-items: center; gap: 10px;">
                             <div class="reaction-buttons">
                                 <button class="reaction-btn" data-news-id="other-2" data-reaction="like" onclick="handleReaction(event, 'other-2', 'like')">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="#b1a798">
                                         <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558-.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"/>
                                     </svg>
-                                    <span class="count">0</span>
                                 </button>
                                 <button class="reaction-btn" data-news-id="other-2" data-reaction="dislike" onclick="handleReaction(event, 'other-2', 'dislike')">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="#b1a798" style="transform: rotate(180deg);">
                                         <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558-.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"/>
                                     </svg>
-                                    <span class="count">0</span>
                                 </button>
                             </div>
-                            <a href="https://www.smh.com.au/business/markets/trump-says-big-copper-tariff-coming-along-with-crippling-drug-levy-20250709-p5mdkc.html?ref=rss&utm_medium=rss&utm_source=rss_business" target="_blank" class="news-link">🔗 원문 보기</a>
+                            <a href="http://www.newsbtc.com/news/ethereum/ethereum-breaks-through-50ema/" target="_blank" class="news-link">🔗 원문 보기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="news-card" onclick="openModal('modal-other-3')">
+                
+                <div class="news-thumbnail has-image" 
+                     style="background-image: url('https://images.unsplash.com/photo-1700635360469-634b959cd799?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzA2MDh8MHwxfHNlYXJjaHwxOHx8ZWNvbm9teSUyMGJ1c2luZXNzfGVufDF8MHx8fDE3NTIzOTM3NDZ8MA&ixlib=rb-4.1.0&q=80&w=400');">
+                </div>
+                <div class="news-content">
+                    <div class="region-badge">
+                        <span>🌍</span>
+                        <span>글로벌</span>
+                    </div>
+                    <h3 class="news-title">홍콩을 위한 작은 발걸음, 중국 우주 산업을 위한 거대한 도약...</h3>
+                    <p class="news-summary">홍콩이 글로벌 우주 경제에서 주도적인 역할을 할 수 있다는 생각은 지난달 초 존 리카치우 행정장관에게 이 가능성을 제시했을 때 회의적인 반응을 받았다.</p>
+                    <div class="news-meta">
+                        <span>📅 2025-07-13 11:49</span>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <div class="reaction-buttons">
+                                <button class="reaction-btn" data-news-id="other-3" data-reaction="like" onclick="handleReaction(event, 'other-3', 'like')">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#b1a798">
+                                        <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558-.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"/>
+                                    </svg>
+                                </button>
+                                <button class="reaction-btn" data-news-id="other-3" data-reaction="dislike" onclick="handleReaction(event, 'other-3', 'dislike')">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#b1a798" style="transform: rotate(180deg);">
+                                        <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558-.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <a href="https://www.scmp.com/opinion/hong-kong-opinion/article/3317831/few-small-steps-hong-kong-giant-leap-chinas-space-sector?utm_source=rss_feed" target="_blank" class="news-link">🔗 원문 보기</a>
                         </div>
                     </div>
                 </div>
@@ -1241,31 +1255,29 @@
                 <div class="news-cards">
                     
             <div class="news-card deep-analysis-card" onclick="openModal('modal-deep-1')">
-                <h3 class="news-title deep-title">관세가 미국 경제의 가장 큰 문제인 이유.</h3>
+                <h3 class="news-title deep-title">VeChain이 AI, 빅데이터, IoT를 연결하는 연구에서 학술적으로 인정받았습니다.</h3>
                 <div class="deep-content-wrapper">
                     <div class="deep-thumbnail">
-                        <img src="https://images.unsplash.com/photo-1551135049-8a33b5883817?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzA2MDh8MHwxfHNlYXJjaHwyMHx8YnVzaW5lc3MlMjBmaW5hbmNlJTIwcHJvZmVzc2lvbmFsfGVufDF8MHx8fDE3NTE5MTE3ODF8MA&ixlib=rb-4.1.0&q=80&w=400" alt="News thumbnail" onerror="this.style.display='none'">
+                        <img src="https://images.unsplash.com/photo-1675557570482-df9926f61d86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzA2MDh8MHwxfHNlYXJjaHw5fHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwdGVjaG5vbG9neXxlbnwxfDB8fHwxNzUyMzQ1MDg4fDA&ixlib=rb-4.1.0&q=80&w=400" alt="News thumbnail" onerror="this.style.display='none'">
                     </div>
                     <div class="deep-summary">
-                        <p>후버 연구소의 랜히 치가 블룸버그 "더 클로즈"에 출연하여 구리 제품에 대한 50%, 의약품에 대한 최대 200%에 달하는 새로운 관세 가능성에 대해 논의합니다. (출처: 블룸버그)</p>
+                        <p>VeChain은 공급망 관리에 대한 기여로 학술 연구에서 인정받았습니다. VeChain은 공급망을 따라 상품의 효율적인 추적을 제공하는 것으로 보고되었습니다.</p>
                         <div class="news-meta">
-                            <span>📅 2025-07-09T08:47:25.172575</span>
+                            <span>📅 2025-07-13 11:49</span>
                             <div style="display: flex; align-items: center; gap: 10px;">
                                 <div class="reaction-buttons">
                                     <button class="reaction-btn" data-news-id="deep-1" data-reaction="like" onclick="handleReaction(event, 'deep-1', 'like')">
                                         <svg width="16" height="16" viewBox="0 0 24 24" fill="#b1a798">
                                             <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558-.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"/>
                                         </svg>
-                                        <span class="count">0</span>
-                                    </button>
+                                        </button>
                                     <button class="reaction-btn" data-news-id="deep-1" data-reaction="dislike" onclick="handleReaction(event, 'deep-1', 'dislike')">
                                         <svg width="16" height="16" viewBox="0 0 24 24" fill="#b1a798" style="transform: rotate(180deg);">
                                             <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558-.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"/>
                                         </svg>
-                                        <span class="count">0</span>
-                                    </button>
+                                        </button>
                                 </div>
-                                <a href="https://www.bloomberg.com/news/videos/2025-07-08/why-tariffs-are-the-biggest-issue-for-the-us-economy-video" target="_blank" class="news-link">🔗 원문 보기</a>
+                                <a href="https://www.crypto-news-flash.com/vechain-recognized-in-academic-study-for-bridging-ai-big-data-and-iot/?utm_source=rss&utm_medium=rss&utm_campaign=vechain-recognized-in-academic-study-for-bridging-ai-big-data-and-iot" target="_blank" class="news-link">🔗 원문 보기</a>
                             </div>
                         </div>
                     </div>
@@ -1282,7 +1294,7 @@
                     <span>주요 키워드 (10개)</span>
                 </h2>
                 <div class="tags-container">
-                    <span class="tag">#은</span><span class="tag">#관세</span><span class="tag">#구리</span><span class="tag">#금</span><span class="tag">#달러</span><span class="tag">#금리</span><span class="tag">#주식</span><span class="tag">#블록체인</span><span class="tag">#SOL</span><span class="tag">#글로벌경제</span>
+                    <span class="tag">#은</span><span class="tag">#관세</span><span class="tag">#AI</span><span class="tag">#무역</span><span class="tag">#중국</span><span class="tag">#원</span><span class="tag">#Trump</span><span class="tag">#정책</span><span class="tag">#정부</span><span class="tag">#ETH</span>
                 </div>
             </section>
             
@@ -1297,7 +1309,7 @@
         
         <!-- 푸터 -->
         <footer class="footer">
-            <p>🤖 Miner7 Newsletter by AI | 생성시간: 2025-07-09 09:21:33</p>
+            <p>🤖 Miner7 Newsletter by AI | 생성시간: 2025-07-13 17:02:25</p>
             <p>Everyday diggin 7 hidden gems for you</p>
             <div class="footer-links">
                 <a href="#" onclick="showServiceModal()">Privacy Policy</a>
@@ -1308,33 +1320,93 @@
     </div>
     
     
+                <div id="modal-trending-1" class="modal">
+                    <div class="modal-content">
+                        <span class="close-modal" onclick="closeModal('modal-trending-1')">&times;</span>
+                        <div style="display: flex; gap: 20px; margin-bottom: 20px;">
+                            <div style="width: 300px; height: 200px; background-image: url('https://images.unsplash.com/photo-1496096265110-f83ad7f96608?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzA2MDh8MHwxfHNlYXJjaHwzfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwdGVjaG5vbG9neXxlbnwxfDB8fHwxNzUyMzQ1MDg4fDA&ixlib=rb-4.1.0&q=80&w=400'); background-size: cover; background-position: center; border-radius: 12px; flex-shrink: 0; background-color: #efede2;"></div>
+                            <div style="flex: 1;">
+                                <h2 style="margin-bottom: 15px; color: #182526; font-weight: 600;">트럼프, 멕시코와 EU에 30% 관세 부과, 무역 전쟁 격화.</h2>
+                                <div style="font-size: 0.9em; color: #182526;">
+                                    [DATE] 2025-07-13 11:49 | [NEWS] South China Morning Post
+                                    <br><a href="https://www.scmp.com/news/us/economy-trade-business/article/3318000/trump-trade-war-escalates-30-tariffs-eu-mexico?utm_source=rss_feed" target="_blank" style="color: #182526;">🔗 원문 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="background: #ffffff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(24,37,38,0.08);">
+                            <h3 style="color: #182526; margin-bottom: 15px; font-size: 1.1em; font-weight: 600;">📄 뉴스 요약 (번역)</h3>
+                            <p style="color: #182526; line-height: 1.6; font-size: 0.95em;">도널드 트럼프 미국 대통령은 토요일에 그의 행정부가 8월 1일부터 멕시코와 27개국 유럽연합으로부터 수입되는 상품에 대해 30%의 관세를 부과할 것이라고 밝혔으며, 이는 워싱턴의 두 주요 무역 파트너를 겨냥한 것이다.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="modal-trending-2" class="modal">
+                    <div class="modal-content">
+                        <span class="close-modal" onclick="closeModal('modal-trending-2')">&times;</span>
+                        <div style="display: flex; gap: 20px; margin-bottom: 20px;">
+                            <div style="width: 300px; height: 200px; background-image: url('https://images.unsplash.com/photo-1735825764451-d2186b7f4bf9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzA2MDh8MHwxfHNlYXJjaHwxMnx8YnVzaW5lc3MlMjBmaW5hbmNlJTIwcHJvZmVzc2lvbmFsfGVufDF8MHx8fDE3NTIzNDUwODh8MA&ixlib=rb-4.1.0&q=80&w=400'); background-size: cover; background-position: center; border-radius: 12px; flex-shrink: 0; background-color: #efede2;"></div>
+                            <div style="flex: 1;">
+                                <h2 style="margin-bottom: 15px; color: #182526; font-weight: 600;">트럼프 전 대통령의 영국 상품 대부분에 대한 10% 관세는 '계속 유지될 것'이라고 만델슨 경이 밝혔다.</h2>
+                                <div style="font-size: 0.9em; color: #182526;">
+                                    [DATE] 2025-07-13 11:49 | [NEWS] Guardian Business
+                                    <br><a href="https://www.theguardian.com/us-news/2025/jul/12/trumps-10-tariff-on-most-uk-goods-here-to-stay-says-lord-mandelson" target="_blank" style="color: #182526;">🔗 원문 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="background: #ffffff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(24,37,38,0.08);">
+                            <h3 style="color: #182526; margin-bottom: 15px; font-size: 1.1em; font-weight: 600;">📄 뉴스 요약 (번역)</h3>
+                            <p style="color: #182526; line-height: 1.6; font-size: 0.95em;">미국 주재 영국 대사는 보편적인 관세 부과 가능성은 낮지만 일부 부문에서는 협상의 여지가 있다고 믿는다. 미국에 수입되는 대부분의 영국 상품에 대한 10% 관세는 "계속 유지될 가능성이 높다"...</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="modal-trending-3" class="modal">
+                    <div class="modal-content">
+                        <span class="close-modal" onclick="closeModal('modal-trending-3')">&times;</span>
+                        <div style="display: flex; gap: 20px; margin-bottom: 20px;">
+                            <div style="width: 300px; height: 200px; background-image: url('https://images.unsplash.com/photo-1735825764457-ffdf0b5aa5dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzA2MDh8MHwxfHNlYXJjaHwxMHx8YnVzaW5lc3MlMjBmaW5hbmNlJTIwcHJvZmVzc2lvbmFsfGVufDF8MHx8fDE3NTIzNDUwODh8MA&ixlib=rb-4.1.0&q=80&w=400'); background-size: cover; background-position: center; border-radius: 12px; flex-shrink: 0; background-color: #efede2;"></div>
+                            <div style="flex: 1;">
+                                <h2 style="margin-bottom: 15px; color: #182526; font-weight: 600;">영국 의원들이 라미 외무장관에게 팔레스타인 국가를 승인할 것을 촉구합니다.</h2>
+                                <div style="font-size: 0.9em; color: #182526;">
+                                    [DATE] 2025-07-13 11:49 | [NEWS] Al Jazeera Economy
+                                    <br><a href="https://www.aljazeera.com/news/2025/7/12/uk-lawmakers-urge-foreign-secretary-lammy-to-recognise-palestinian-state?traffic_source=rss" target="_blank" style="color: #182526;">🔗 원문 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="background: #ffffff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(24,37,38,0.08);">
+                            <h3 style="color: #182526; margin-bottom: 15px; font-size: 1.1em; font-weight: 600;">📄 뉴스 요약 (번역)</h3>
+                            <p style="color: #182526; line-height: 1.6; font-size: 0.95em;">노동당 의원들은 팔레스타인 영토의 합병이 너무 늦기 전에 런던이 즉각 행동하여 이를 중단할 것을 요구한다.</p>
+                        </div>
+                    </div>
+                </div>
+                
             <div id="modal-major-1" class="modal">
                 <div class="modal-content">
                     <span class="close-modal" onclick="closeModal('modal-major-1')">&times;</span>
                     <div style="display: flex; gap: 20px; margin-bottom: 20px;">
-                        <div style="width: 300px; height: 200px; background-image: url('https://images.unsplash.com/photo-1612178991541-b48cc8e92a4d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzA2MDh8MHwxfHNlYXJjaHw5fHxzdG9jayUyMG1hcmtldCUyMHRyYWRpbmd8ZW58MXwwfHx8MTc1MTk1MjM1MXww&ixlib=rb-4.1.0&q=80&w=400'); background-size: cover; background-position: center; border-radius: 12px; flex-shrink: 0; background-color: #f7fafc;"></div>
+                        <div style="width: 300px; height: 200px; background-image: url('https://images.unsplash.com/photo-1738566061688-47e66a008254?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzA2MDh8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBwcm9mZXNzaW9uYWx8ZW58MXwwfHx8MTc1MjM0NTA4OHww&ixlib=rb-4.1.0&q=80&w=400'); background-size: cover; background-position: center; border-radius: 12px; flex-shrink: 0; background-color: #f7fafc;"></div>
                         <div style="flex: 1;">
-                            <h2 style="margin-bottom: 15px; color: #182526; font-weight: 600;">아시아 시장은 트럼프 대통령의 강경 입장 지속에 신중한 개장을 준비하고 있습니다: 시장 동향 정리.</h2>
+                            <h2 style="margin-bottom: 15px; color: #182526; font-weight: 600;">세계는 중국의 커져가는 경제력에 대해 그 어느 때보다 경계해야 한다.</h2>
                             <div style="font-size: 0.9em; color: #182526;">
-                                [DATE] 2025-07-09T08:47:25.172586 | [NEWS] Bloomberg
-                                <br><a href="https://www.bloomberg.com/news/articles/2025-07-08/stock-market-today-dow-s-p-live-updates" target="_blank" style="color: #182526;">🔗 원문 보기</a>
+                                [DATE] 2025-07-13 11:49 | [NEWS] Guardian Business
+                                <br><a href="https://www.theguardian.com/business/2025/jul/12/world-more-wary-china-growing-economic-powe" target="_blank" style="color: #182526;">🔗 원문 보기</a>
                             </div>
                         </div>
                     </div>
                     
-        <div style="background: rgba(177, 167, 152, 0.15); padding: 15px; border-radius: 10px; margin-bottom: 15px; border: 1px solid rgba(177, 167, 152, 0.3);">
+        <div style="background: #ffffff; padding: 20px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(24,37,38,0.08);">
             <h4 style="color: #182526; margin-bottom: 10px; font-size: 1.0em; font-weight: 600;">📝 뉴스 요약</h4>
-            <p style="color: #182526; line-height: 1.6; font-size: 0.9em;">아시아 주식은 도널드 트럼프 대통령이 8월 관세 기한 연장을 거부하면서 월가의 부진한 흐름 이후 조심스러운 시작을 보일 것으로 예상된다. 미국 구리 가격은 대통령의 발언 후 급등했다.</p>
+            <p style="color: #182526; line-height: 1.6; font-size: 0.9em;">독재 정권은 세계 무대에서 악의적인 행위자이며, 다른 국가들의 경제 자원을 약화시키려는 노력은 제한되어야 한다. 중국은 도널드 트럼프의 경제 정책에 맞서기 위해 가능한 모든 수단을 동원하고 있다.</p>
         </div>
         
-                <div style="background: rgba(239, 237, 226, 0.4); padding: 15px; border-radius: 10px; margin-bottom: 15px; border: 1px solid rgba(24, 37, 38, 0.2);">
+                <div style="background: #ffffff; padding: 20px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(24,37,38,0.08);">
                     <h4 style="color: #182526; margin-bottom: 10px; font-size: 1.0em; font-weight: 600;">🤖 AI 분석</h4>
                     <div style="color: #182526; line-height: 1.6; font-size: 0.85em;">
-                <div style="margin-bottom: 8px;"><strong>📋 사실 검증:</strong> 핵심 사실 확인: 1) 트럼프의 8월 관세 시한에 대한 강경 입장 확인, 2) 미국 구리 가격 상승 추세, 3) 아시아 시장, 신중한 거래 세션 준비. 제공된 시장 상황과의 교차 검증 결과, 월가의 부진한 성적 및 유가 시장 안정에 대한 보도가 일관성을 보임.</div><div style="margin-bottom: 8px;"><strong>📈 시장 영향:</strong> 단기 (1-3개월): 아시아 시장, 특히 수출 의존 경제에서 시장 변동성이 심화될 것으로 예상됩니다. 구리 가격 급등은 산업 부문의 기대감을 시사합니다. 중장기 (3-12개월): 아시아 제조업 네트워크의 구조조정 가능성, 지역 통화에 대한 지속적인 압박, 특히 구리와 석유 시장에서 상품 거래 패턴의 변화 가능성이 있습니다.</div><div style="margin-bottom: 8px;"><strong>💼 투자자 관점:</strong> 개인 투자자들은 아시아 주식에 대해 신중한 접근을 취하고, 방어적인 포지션을 고려해야 합니다. 상품 거래에서 전략적 기회가 부상하고 있으며, 무역 긴장감에 덜 노출된 내수 소비 중심의 아시아 기업들이 유망합니다.</div><div style="margin-bottom: 8px;"><strong>🎯 핵심 결론:</strong> 구리 시장은 가격 모멘텀으로 인해 단기 거래 기회를 제공합니다. • 아시아 수출 중심 주식은 8월까지 하락 위험이 커지고 있다.</div><div><strong>⚠️ 리스크 요인:</strong> 미중 무역 긴장 고조로 인한 광범위한 경제적 영향. • 상품 가격 변동성이 산업 부문의 안정성을 해치고 있습니다.</div>
+                <div style="margin-bottom: 8px;"><strong>📋 사실 검증:</strong> 뉴스 '세계는 중국의 성장하는 경제력에 대해 그 어느 때보다 경계해야 한다' 클로드 분석 중 오류: 클로드 API 호출 실패: 529.</div><div style="margin-bottom: 8px;"><strong>📈 시장 영향:</strong> 클로드 시장 영향 분석 실패</div><div style="margin-bottom: 8px;"><strong>💼 투자자 관점:</strong> 클로드 투자자 관점 분석 실패</div><div style="margin-bottom: 8px;"><strong>🎯 핵심 결론:</strong> 클로드 분석 실패로 인한 결론 부재.</div><div><strong>⚠️ 리스크 요인:</strong> 클로드 API 분석 실패 위험...</div>
                     </div>
                 </div>
                 
-        <div style="background: rgba(177, 167, 152, 0.2); padding: 15px; border-radius: 10px; border: 1px solid rgba(177, 167, 152, 0.4);">
+        <div style="background: #ffffff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(24,37,38,0.08);">
             <h4 style="color: #182526; margin-bottom: 10px; font-size: 1.0em; font-weight: 600;">📊 기본 분석 태그</h4>
             <div style="display: flex; flex-direction: column; gap: 8px;">
                 <div style="display: flex; align-items: center; gap: 10px;">
@@ -1359,76 +1431,29 @@
                 <div class="modal-content">
                     <span class="close-modal" onclick="closeModal('modal-major-2')">&times;</span>
                     <div style="display: flex; gap: 20px; margin-bottom: 20px;">
-                        <div style="width: 300px; height: 200px; background-image: url('https://images.unsplash.com/photo-1576520804567-b88e5dade12d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzA2MDh8MHwxfHNlYXJjaHwxOXx8Yml0Y29pbiUyMGNyeXB0b2N1cnJlbmN5fGVufDF8MHx8fDE3NTIwMjA0OTR8MA&ixlib=rb-4.1.0&q=80&w=400'); background-size: cover; background-position: center; border-radius: 12px; flex-shrink: 0; background-color: #f7fafc;"></div>
+                        <div style="width: 300px; height: 200px; background-image: url('https://images.unsplash.com/photo-1580584126903-c17d41830450?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzA2MDh8MHwxfHNlYXJjaHw0fHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwdGVjaG5vbG9neXxlbnwxfDB8fHwxNzUyMzQ1MDg4fDA&ixlib=rb-4.1.0&q=80&w=400'); background-size: cover; background-position: center; border-radius: 12px; flex-shrink: 0; background-color: #f7fafc;"></div>
                         <div style="flex: 1;">
-                            <h2 style="margin-bottom: 15px; color: #182526; font-weight: 600;">바이낸스에서 310억 달러 규모의 스테이블코인 급증으로 트레이더들의 알트시즌 기대감이 되살아났다.</h2>
+                            <h2 style="margin-bottom: 15px; color: #182526; font-weight: 600;">EU는 트럼프 대통령의 30% 관세 위협에 따라 무역 협상 해결 방안을 모색하는 데 비틀거릴 것이다.</h2>
                             <div style="font-size: 0.9em; color: #182526;">
-                                [DATE] 2025-07-09T08:47:25.172612 | [NEWS] Cointelegraph
-                                <br><a href="https://cointelegraph.com/news/dollar31b-stablecoin-surge-at-binance-revives-traders-altseason-hopes?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" target="_blank" style="color: #182526;">🔗 원문 보기</a>
+                                [DATE] 2025-07-13 11:49 | [NEWS] Guardian Business
+                                <br><a href="https://www.theguardian.com/world/2025/jul/12/eu-will-be-reeling-over-how-to-tackle-trade-talks-after-trumps-30-tariff-threat" target="_blank" style="color: #182526;">🔗 원문 보기</a>
                             </div>
                         </div>
                     </div>
                     
-        <div style="background: rgba(177, 167, 152, 0.15); padding: 15px; border-radius: 10px; margin-bottom: 15px; border: 1px solid rgba(177, 167, 152, 0.3);">
+        <div style="background: #ffffff; padding: 20px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(24,37,38,0.08);">
             <h4 style="color: #182526; margin-bottom: 10px; font-size: 1.0em; font-weight: 600;">📝 뉴스 요약</h4>
-            <p style="color: #182526; line-height: 1.6; font-size: 0.9em;">바이낸스의 급증하는 스테이블코인 보유량, 비트코인의 하락하는 지배력, 그리고 강세 차트 패턴은 2025년 하반기에 알트시즌이 시작될 가능성을 시사합니다.</p>
+            <p style="color: #182526; line-height: 1.6; font-size: 0.9em;">블록은 이미 강경한 발언에서 최소한의 합의를 모색하는 쪽으로 입장을 번복했지만, 미국 대통령이 다시 판도를 뒤집었다. 도널드 트럼프를 추측하는 것은 어리석은 짓이다. 하지만 토요일의 충격적인 위협은 부과하려는.</p>
         </div>
         
-                <div style="background: rgba(239, 237, 226, 0.4); padding: 15px; border-radius: 10px; margin-bottom: 15px; border: 1px solid rgba(24, 37, 38, 0.2);">
+                <div style="background: #ffffff; padding: 20px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(24,37,38,0.08);">
                     <h4 style="color: #182526; margin-bottom: 10px; font-size: 1.0em; font-weight: 600;">🤖 AI 분석</h4>
                     <div style="color: #182526; line-height: 1.6; font-size: 0.85em;">
-                <div style="margin-bottom: 8px;"><strong>📋 사실 검증:</strong> 바인란스의 스테이블코인 보유액이 310억 달러로 증가했으며, 비트코인 점유율 하락과 더불어 기술적 차트 분석 결과 2025년 하반기에 알트코인 시즌이 올 가능성을 나타냅니다. 시장 데이터와 교차 검증을 통해 해당 수치의 신뢰성은 높다고 판단됩니다.</div><div style="margin-bottom: 8px;"><strong>📈 시장 영향:</strong> 단기적으로(1-3개월)는 스테이블코인 유동성 증가로 인해 알트코인 거래량이 늘어날 것으로 예상됩니다. 중장기적으로(3-12개월)는 비트코인 도미넌스가 하락하는 추세와 맞물려 2025년 하반기에 알트코인 시장이 강세를 보일 가능성이 높습니다.</div><div style="margin-bottom: 8px;"><strong>💼 투자자 관점:</strong> 개인 투자자는 알트코인 분산 투자 기회가 늘어나고 있습니다. 기관 투자자는 스테이블코인 기반 디파이 상품 개발과 알트코인 투자 확대를 고려해야 합니다. 거래소 유동성이 증가하면서 대규모 포지션 진입이 더 쉬워질 것으로 보입니다.</div><div style="margin-bottom: 8px;"><strong>🎯 핵심 결론:</strong> 2025년 하반기 알트코인 시장 강세에 대비해야 합니다. • 스테이블코인 기반 투자 전략 수립 권장.</div><div><strong>⚠️ 리스크 요인:</strong> 규제 리스크: • 스테이블코인 관련 규제 강화 가능성 • 시장 변동성: 대형 거래소 집중 심화로 인한 시스템적 위험</div>
+                <div style="margin-bottom: 8px;"><strong>📋 사실 검증:</strong> 핵심 사실 확인: 트럼프 대통령이 8월 1일부터 유럽연합 및 멕시코 수입품에 대해 30% 관세를 부과한다고 발표했다. 여러 출처에서 이 정책 발표를 입증하고 있다. 주요 관계자: 미국 행정부, 유럽연합 무역 관계자, 멕시코 정부.</div><div style="margin-bottom: 8px;"><strong>📈 시장 영향:</strong> 유로화와 멕시코 페소에 대한 환율 압박이 예상됩니다. 중장기적으로는 공급망 재편 비용, 미국 시장의 인플레이션 압력, 그리고 유럽연합/멕시코의 보복 조치가 미국 수출업체에 영향을 미칠 가능성이 있습니다. 관련 부문에서 무역량은 15-20% 감소할 것으로 예상됩니다.</div><div style="margin-bottom: 8px;"><strong>💼 투자자 관점:</strong> 소매 투자자: 유럽/멕시코 ADR 및 수출 의존 기업에 대한 노출을 줄이는 것을 고려하십시오. 미국 내수 대안 및 무역 보호 산업에서 기회가 있을 수 있습니다. 기관 투자자: 글로벌 무역 의존 포지션에 대한 포트폴리오 재조정 필요합니다. 환율 변동 위험을 헤지하십시오. 리쇼어링으로 인해 수혜를 입는 국내 제조업 및 공급망 기술 기업에서 전략적 기회를 모색하십시오.</div><div style="margin-bottom: 8px;"><strong>🎯 핵심 결론:</strong> 유럽연합/멕시코 수출 의존도가 높은 부문에 대한 즉각적인 포트폴리오 재조정 필요... (채널: EU/Mexican export-dependent sectors) • 미국 내 제조 및 공급망 기술 기업들은 성장 기회를 제공합니다.</div><div><strong>⚠️ 리스크 요인:</strong> EU와 멕시코의 보복적 무역 조치가 더 광범위한 무역 전쟁으로 확대될 수 있다. (채널: EU and Mexico could escalate into broader trade war) • 공급망 차질은 여러 부문에 걸쳐 예상치 못한 수익 영향으로 이어질 수 있습니다.</div>
                     </div>
                 </div>
                 
-        <div style="background: rgba(177, 167, 152, 0.2); padding: 15px; border-radius: 10px; border: 1px solid rgba(177, 167, 152, 0.4);">
-            <h4 style="color: #182526; margin-bottom: 10px; font-size: 1.0em; font-weight: 600;">📊 기본 분석 태그</h4>
-            <div style="display: flex; flex-direction: column; gap: 8px;">
-                <div style="display: flex; align-items: center; gap: 10px;">
-                    <span style="font-weight: 600; color: #182526; font-size: 0.85em; min-width: 80px;">🌍 지역:</span>
-                    <span style="font-size: 0.85em;"><span style="color: #182526; font-weight: 500;">글로벌(Global)</span></span>
-                </div>
-                <div style="display: flex; align-items: center; gap: 10px;">
-                    <span style="font-weight: 600; color: #182526; font-size: 0.85em; min-width: 80px;">🏢 섹터:</span>
-                    <span style="font-size: 0.85em;"><span style="color: #b1a798;">현재 관망</span></span>
-                </div>
-                <div style="display: flex; align-items: center; gap: 10px;">
-                    <span style="font-weight: 600; color: #182526; font-size: 0.85em; min-width: 80px;">📈 감성:</span>
-                    <span style="font-size: 0.85em;"><span style="color: #b1a798;">중립(Neutral)</span></span>
-                </div>
-            </div>
-        </div>
-        
-                </div>
-            </div>
-            
-            <div id="modal-major-3" class="modal">
-                <div class="modal-content">
-                    <span class="close-modal" onclick="closeModal('modal-major-3')">&times;</span>
-                    <div style="display: flex; gap: 20px; margin-bottom: 20px;">
-                        <div style="width: 300px; height: 200px; background-image: url('https://images.unsplash.com/photo-1621629057099-c7cf1fb8ca1e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzA2MDh8MHwxfHNlYXJjaHwxMnx8ZmluYW5jaWFsJTIwbWFya2V0JTIwZWNvbm9teXxlbnwxfDB8fHwxNzUxOTkzMjYzfDA&ixlib=rb-4.1.0&q=80&w=400'); background-size: cover; background-position: center; border-radius: 12px; flex-shrink: 0; background-color: #f7fafc;"></div>
-                        <div style="flex: 1;">
-                            <h2 style="margin-bottom: 15px; color: #182526; font-weight: 600;">SOL 선물 자금 조달 금리가 마이너스로 전환되었습니다. 다음 목표가는 180달러일까요?</h2>
-                            <div style="font-size: 0.9em; color: #182526;">
-                                [DATE] 2025-07-09T08:47:25.172610 | [NEWS] Cointelegraph
-                                <br><a href="https://cointelegraph.com/news/sol-futures-funding-rate-turns-negative-is-180-the-next-stop?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" target="_blank" style="color: #182526;">🔗 원문 보기</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-        <div style="background: rgba(177, 167, 152, 0.15); padding: 15px; border-radius: 10px; margin-bottom: 15px; border: 1px solid rgba(177, 167, 152, 0.3);">
-            <h4 style="color: #182526; margin-bottom: 10px; font-size: 1.0em; font-weight: 600;">📝 뉴스 요약</h4>
-            <p style="color: #182526; line-height: 1.6; font-size: 0.9em;">블록체인 경쟁 업체들과 기관 투자자들의 최근 결정들이 솔라나의 시장 점유율을 잠식하고 있습니다. 이것이 SOL 가격에 영향을 미칠까요? </p>
-        </div>
-        
-                <div style="background: rgba(239, 237, 226, 0.4); padding: 15px; border-radius: 10px; margin-bottom: 15px; border: 1px solid rgba(24, 37, 38, 0.2);">
-                    <h4 style="color: #182526; margin-bottom: 10px; font-size: 1.0em; font-weight: 600;">🤖 AI 분석</h4>
-                    <div style="color: #182526; line-height: 1.6; font-size: 0.85em;">
-                <div style="margin-bottom: 8px;"><strong>📋 사실 검증:</strong> 핵심 사실 확인: 1) SOL 선물 자금 조달 금리가 음수로 전환됨 2) 180달러의 목표 가격 언급 3) 기관 투자자들이 솔라나에 영향을 미치는 변화를 주고 있음 4) 다른 블록체인 대안들의 경쟁 압력.</div><div style="margin-bottom: 8px;"><strong>📈 시장 영향:</strong> 단기 (1-3개월): 부정적인 자금 조달 금리는 일반적으로 약세 심리와 가격 하락 압력을 나타냅니다. 기관 투자자들의 포지션 재조정이 변동성을 야기할 수 있습니다. 중장기 (3-12개월): 경쟁적인 블록체인 환경과 기관 투자자 행동은 시장 점유율에 대한 잠재적 도전을 시사하지만, 180달러 목표가는 현재의 역풍에도 불구하고 낙관적인 장기 전망을 암시합니다. 아시아 시장의 약세는 암호화 자산에 대한 압박을 더욱 심화시킬 수 있습니다.</div><div style="margin-bottom: 8px;"><strong>💼 투자자 관점:</strong> 소매: 단기 변동성은 위험과 기회를 동시에 제공하며, 마이너스 자금 조달 금리는 숏 스퀴즈 가능성을 시사합니다. 기관: 자산 재분배 패턴은 근본적인 우려보다는 전략적 포지셔닝을 나타냅니다. 변동성 거래 및 자금 조달 금리 하락 시기에 대한 매수 기회가 존재합니다.</div><div style="margin-bottom: 8px;"><strong>🎯 핵심 결론:</strong> 음수 금리는 약세 신호에도 불구하고 단기 거래 기회를 제공한다. • 기관 재배치는 근본적인 우려보다는 전략적 우려를 시사합니다.</div><div><strong>⚠️ 리스크 요인:</strong> 블록체인 경쟁 심화로 솔라나의 시장 지위가 약화될 수 있다. • 더 광범위한 시장의 불확실성, 특히 아시아 시장에서의 불확실성은 암호화 자산 가치 평가에 영향을 미칠 수 있습니다.</div>
-                    </div>
-                </div>
-                
-        <div style="background: rgba(177, 167, 152, 0.2); padding: 15px; border-radius: 10px; border: 1px solid rgba(177, 167, 152, 0.4);">
+        <div style="background: #ffffff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(24,37,38,0.08);">
             <h4 style="color: #182526; margin-bottom: 10px; font-size: 1.0em; font-weight: 600;">📊 기본 분석 태그</h4>
             <div style="display: flex; flex-direction: column; gap: 8px;">
                 <div style="display: flex; align-items: center; gap: 10px;">
@@ -1453,29 +1478,29 @@
                 <div class="modal-content">
                     <span class="close-modal" onclick="closeModal('modal-other-1')">&times;</span>
                     <div style="display: flex; gap: 20px; margin-bottom: 20px;">
-                        <div style="width: 300px; height: 200px; background-image: url('https://images.unsplash.com/photo-1516110833967-0b5716ca1387?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzA2MDh8MHwxfHNlYXJjaHwyfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwdGVjaG5vbG9neXxlbnwxfDB8fHwxNzUyMDIwNDk0fDA&ixlib=rb-4.1.0&q=80&w=400'); background-size: cover; background-position: center; border-radius: 12px; flex-shrink: 0; background-color: #f7fafc;"></div>
+                        <div style="width: 300px; height: 200px; background-image: url('https://images.unsplash.com/photo-1746883741141-04859907ef5f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzA2MDh8MHwxfHNlYXJjaHwxOXx8YXJ0aWZpY2lhbCUyMGludGVsbGlnZW5jZSUyMHRlY2hub2xvZ3l8ZW58MXwwfHx8MTc1MjM0NTA4OHww&ixlib=rb-4.1.0&q=80&w=400'); background-size: cover; background-position: center; border-radius: 12px; flex-shrink: 0; background-color: #f7fafc;"></div>
                         <div style="flex: 1;">
-                            <h2 style="margin-bottom: 15px; color: #182526; font-weight: 600;">타타 스틸 1분기 업데이트: 인도 생산량은 설비 중단으로 인해 전년 동기 대비 526만 톤으로 보합.</h2>
+                            <h2 style="margin-bottom: 15px; color: #182526; font-weight: 600;">호주 앤서니 알바니즈, 지역 내 우려에도 불구하고 중국과의 무역 증진 위해 방문.</h2>
                             <div style="font-size: 0.9em; color: #182526;">
-                                [DATE] 2025-07-09T08:47:25.172584 | [NEWS] Economic Times India
-                                <br><a href="https://economictimes.indiatimes.com/markets/stocks/news/tata-steel-q1-updates-india-production-flat-yoy-at-5-26-million-tons-on-plant-shutdowns/articleshow/122322357.cms" target="_blank" style="color: #182526;">🔗 원문 보기</a>
+                                [DATE] 2025-07-13 11:49 | [NEWS] Hong Kong Free Press
+                                <br><a href="https://hongkongfp.com/2025/07/13/australias-anthony-albanese-in-china-to-boost-trade-despite-regional-angst/" target="_blank" style="color: #182526;">🔗 원문 보기</a>
                             </div>
                         </div>
                     </div>
                     
-        <div style="background: rgba(177, 167, 152, 0.15); padding: 15px; border-radius: 10px; margin-bottom: 15px; border: 1px solid rgba(177, 167, 152, 0.3);">
+        <div style="background: #ffffff; padding: 20px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(24,37,38,0.08);">
             <h4 style="color: #182526; margin-bottom: 10px; font-size: 1.0em; font-weight: 600;">📝 뉴스 요약</h4>
-            <p style="color: #182526; line-height: 1.6; font-size: 0.9em;">타타 스틸 인도의 조강 생산량은 1회계연도 2분기에 526만 톤으로 전년 동기 대비 보합세를 유지했지만, 잠셰드푸르와 NINL의 정비 중단으로 인해 판매량은 전년 동기 대비 4% 감소했습니다.</p>
+            <p style="color: #182526; line-height: 1.6; font-size: 0.9em;">앤서니 알바니즈 호주 총리는 토요일 상하이에 도착해 중국을 두 번째 방문했다. 그는 지정학적 긴장이 지속되는 가운데 최근 안정화된 양국 무역 관계를 강화하고자 한다.</p>
         </div>
         
-                <div style="background: rgba(239, 237, 226, 0.4); padding: 15px; border-radius: 10px; margin-bottom: 15px; border: 1px solid rgba(24, 37, 38, 0.2);">
+                <div style="background: #ffffff; padding: 20px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(24,37,38,0.08);">
                     <h4 style="color: #182526; margin-bottom: 10px; font-size: 1.0em; font-weight: 600;">🤖 AI 분석</h4>
                     <div style="color: #182526; line-height: 1.6; font-size: 0.85em;">
-                <div style="margin-bottom: 8px;"><strong>📋 사실 검증:</strong> 타타 스틸 인도의 2026 회계연도 1분기 실적 데이터 확인: 1) 조강 생산량은 526만 톤으로 전년 동기 대비 유지 2) 출하량은 4% 감소 3) 잠쉐드푸르 및 NINL 공장의 정기 보수 영향 확인됨.</div><div style="margin-bottom: 8px;"><strong>📈 시장 영향:</strong> 단기적으로(1-3개월)는 공장 정기 보수에 따른 일시적인 생산 차질이 예상되지만 영향은 제한적일 것으로 보입니다. 중기적으로(3-12개월)는 정기 보수가 완료되어 생산 능력이 정상화될 것으로 기대되며, 철강 수요 회복과 함께 실적 개선의 가능성이 있습니다. 글로벌 철강 시장의 수급에는 큰 영향을 미치지 않을 것으로 판단됩니다.</div><div style="margin-bottom: 8px;"><strong>💼 투자자 관점:</strong> 개인 투자자: 단기적인 실적 악화는 일시적인 요인으로 보고 장기적인 투자 관점을 유지해야 합니다. 기관 투자자: 정기 보수 이후 생산이 정상화되는 시점을 지켜보고, 실적 개선 추세가 확인되면 포지션을 조정하는 것을 고려해야 합니다.</div><div style="margin-bottom: 8px;"><strong>🎯 핵심 결론:</strong> 정기 보수에 따른 생산 및 출하 감소는 일시적인 현상입니다. • 하반기 생산 능력 정상화로 실적 개선을 기대합니다.</div><div><strong>⚠️ 리스크 요인:</strong> 글로벌 철강 수요 감소 가능성 • 원자재 가격 변동성 확대 위험</div>
+                <div style="margin-bottom: 8px;"><strong>📋 사실 검증:</strong> 알바니즈 호주 총리의 상하이 방문은 총리로서 중국을 방문하는 두 번째 일정으로 확인되었습니다. 주요 관계자는 알바니즈 호주 총리와 중국 지도부입니다. 출처 자료에는 제한적인 금융 데이터가 포함되어 있습니다.</div><div style="margin-bottom: 8px;"><strong>📈 시장 영향:</strong> 단기적으로 호주 달러-위안화 거래 쌍과 호주 수출 중심 주식, 특히 광업 및 농업 부문에 긍정적인 영향을 미칠 가능성이 있습니다. 골드만삭스와 JP모건의 중국 가격 통제에 대한 관심은 상품 가격 결정에 더 광범위한 시장적 함의를 시사합니다.</div><div style="margin-bottom: 8px;"><strong>💼 투자자 관점:</strong> 소매 투자자: 호주 수출 지향 주식 및 호주-중국 무역을 추적하는 ETF에 투자 기회 존재. 기관 투자자: 중국 노출도가 높은 상품 및 호주 우량주에 대한 전략적 포지셔닝. 호주와 중국 시장 간 자본 흐름 증가 가능성. 주요 투자 은행의 관심 집중은 중국 정책 변화에 대한 기관 투자자들의 관심을 시사함.</div><div style="margin-bottom: 8px;"><strong>🎯 핵심 결론:</strong> 무역 관계 개선은 호주 자원 및 농업 수출 부문을 활성화할 가능성이 높습니다. • 시점은 중국 국내 경제 정책과 맞물려 있어, 정책 조율이 이루어지고 있음을 시사한다.</div><div><strong>⚠️ 리스크 요인:</strong> 지정치적 긴장이 무역 성과를 빠르게 뒤집을 수 있다. • 중국의 국내 정책 변화(가격 통제)가 무역 역학에 영향을 미칠 수 있다.</div>
                     </div>
                 </div>
                 
-        <div style="background: rgba(177, 167, 152, 0.2); padding: 15px; border-radius: 10px; border: 1px solid rgba(177, 167, 152, 0.4);">
+        <div style="background: #ffffff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(24,37,38,0.08);">
             <h4 style="color: #182526; margin-bottom: 10px; font-size: 1.0em; font-weight: 600;">📊 기본 분석 태그</h4>
             <div style="display: flex; flex-direction: column; gap: 8px;">
                 <div style="display: flex; align-items: center; gap: 10px;">
@@ -1500,29 +1525,76 @@
                 <div class="modal-content">
                     <span class="close-modal" onclick="closeModal('modal-other-2')">&times;</span>
                     <div style="display: flex; gap: 20px; margin-bottom: 20px;">
-                        <div style="width: 300px; height: 200px; background-image: url('https://images.unsplash.com/photo-1655393001768-d946c97d6fd1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzA2MDh8MHwxfHNlYXJjaHw2fHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwdGVjaG5vbG9neXxlbnwxfDB8fHwxNzUyMDIwNDk0fDA&ixlib=rb-4.1.0&q=80&w=400'); background-size: cover; background-position: center; border-radius: 12px; flex-shrink: 0; background-color: #f7fafc;"></div>
+                        <div style="width: 300px; height: 200px; background-image: url('https://images.unsplash.com/photo-1620778185674-ad6058ab908b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzA2MDh8MHwxfHNlYXJjaHw3fHxjcnlwdG9jdXJyZW5jeSUyMGRpZ2l0YWwlMjBjdXJyZW5jeXxlbnwxfDB8fHwxNzUyMzkzNzQ2fDA&ixlib=rb-4.1.0&q=80&w=400'); background-size: cover; background-position: center; border-radius: 12px; flex-shrink: 0; background-color: #f7fafc;"></div>
                         <div style="flex: 1;">
-                            <h2 style="margin-bottom: 15px; color: #182526; font-weight: 600;">트럼프 대통령, 막대한 구리 관세 및 파괴적인 의약품 세금 부과 예고.</h2>
+                            <h2 style="margin-bottom: 15px; color: #182526; font-weight: 600;">이더리움 가격, 거부 후 50EMA 돌파. ETH 지배력 회복세 보임.</h2>
                             <div style="font-size: 0.9em; color: #182526;">
-                                [DATE] 2025-07-09T08:47:25.172578 | [NEWS] Sydney Morning Herald Business
-                                <br><a href="https://www.smh.com.au/business/markets/trump-says-big-copper-tariff-coming-along-with-crippling-drug-levy-20250709-p5mdkc.html?ref=rss&utm_medium=rss&utm_source=rss_business" target="_blank" style="color: #182526;">🔗 원문 보기</a>
+                                [DATE] 2025-07-13 11:49 | [NEWS] newsBTC
+                                <br><a href="http://www.newsbtc.com/news/ethereum/ethereum-breaks-through-50ema/" target="_blank" style="color: #182526;">🔗 원문 보기</a>
                             </div>
                         </div>
                     </div>
                     
-        <div style="background: rgba(177, 167, 152, 0.15); padding: 15px; border-radius: 10px; margin-bottom: 15px; border: 1px solid rgba(177, 167, 152, 0.3);">
+        <div style="background: #ffffff; padding: 20px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(24,37,38,0.08);">
             <h4 style="color: #182526; margin-bottom: 10px; font-size: 1.0em; font-weight: 600;">📝 뉴스 요약</h4>
-            <p style="color: #182526; line-height: 1.6; font-size: 0.9em;">미국 대통령은 미국 구리 수입에 대해 50%의 관세를, 의약품에 대해서는 200%의 관세를 부과할 계획이라고 밝혔습니다.</p>
+            <p style="color: #182526; line-height: 1.6; font-size: 0.9em;">이더리움 가격이 다시 상승 모멘텀을 얻고 있으며 새로운 고점을 향해 나아갈 것으로 보인다. 암호화폐 분석가 닥터 프로핏은 알트코인이 중요한 이동 평균을 돌파했다는 점에 대해 언급했다.</p>
         </div>
         
-                <div style="background: rgba(239, 237, 226, 0.4); padding: 15px; border-radius: 10px; margin-bottom: 15px; border: 1px solid rgba(24, 37, 38, 0.2);">
+                <div style="background: #ffffff; padding: 20px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(24,37,38,0.08);">
                     <h4 style="color: #182526; margin-bottom: 10px; font-size: 1.0em; font-weight: 600;">🤖 AI 분석</h4>
                     <div style="color: #182526; line-height: 1.6; font-size: 0.85em;">
-                <div style="margin-bottom: 8px;"><strong>📋 사실 검증:</strong> 핵심 사실 확인: 1) 트럼프, 구리 수입품에 50% 관세 발표 2) 의약품에 200% 관세 제안 3) 시장 상황을 교차 검증한 결과, 8월 시행 시점 확정. 공식 발표 전까지는 세부 일정 및 시행 방식은 미정이다.</div><div style="margin-bottom: 8px;"><strong>📈 시장 영향:</strong> 단기적으로 국내 구리 가격 상승 압력, 공급망 차질 가능성, 제약 부문 변동성이 예상됩니다.</div><div style="margin-bottom: 8px;"><strong>💼 투자자 관점:</strong> 소매: 국내 구리 광산 주식에서 기회 존재, 제약 부문 변동성에 주의 필요. 기관: 소재 부문 전략적 재편 필요, 헬스케어 포트폴리오 재조정 권고. 국내 제조업 및 공급망 물류 기업에서 기회 발견.</div><div style="margin-bottom: 8px;"><strong>🎯 핵심 결론:</strong> 국내 구리 광산업체들의 가치 상승이 예상됩니다. • 미국 내 제조 시설을 갖춘 제약 회사는 더 유리한 위치에 있습니다...</div><div><strong>⚠️ 리스크 요인:</strong> 주요 교역국으로부터의 보복 관세 가능성이 다른 부문에도 영향을 미치고 있습니다. • 구현 불확실성과 잠재적인 법적 문제 제기는 시장 변동성을 야기할 가능성.</div>
+                <div style="margin-bottom: 8px;"><strong>📋 사실 검증:</strong> 이더리움이 중요한 기술적 지표인 50일 지수 이동 평균(50EMA)을 돌파했습니다. 이는 분석가 닥터 프로핏의 관찰로 확인되었습니다. 이 소식은 이더리움 시장 점유율의 부활을 나타내며, 다른 암호화폐에 비해 시장 점유율이 증가하고 있음을 시사합니다.</div><div style="margin-bottom: 8px;"><strong>📈 시장 영향:</strong> 단기 (1-3개월): 50EMA 상향 돌파는 일반적으로 긍정적인 모멘텀을 나타내며 추가적인 가격 상승을 이끌 수 있습니다. 중장기 (3-12개월): 이더리움 지배력 증가는 이더리움 생태계를 선호하는 구조적 시장 변화를 시사하며, 디파이 및 기관 투자자들의 채택 증가에 의해 촉발될 수 있습니다. 거시 경제 상황이 우호적이라면 지속적인 가치 상승으로 이어질 수 있습니다.</div><div style="margin-bottom: 8px;"><strong>💼 투자자 관점:</strong> 소매 투자자들은 이를 단기 거래 기회에 대한 강세 신호로 해석할 수 있으며, 특히 기술적 돌파구를 고려하면 더욱 그렇습니다. 50일 이동평균선 돌파는 포지션 구축을 위한 기술적 기반을 제공합니다.</div><div style="margin-bottom: 8px;"><strong>🎯 핵심 결론:</strong> 50 이평선 상향 돌파는 단기적으로 강력한 상승 잠재력을 시사합니다. • ETH 지배력 증가는 이더리움을 선호하는 장기적인 구조적 시장 변화를 나타냅니다.</div><div><strong>⚠️ 리스크 요인:</strong> 더 광범위한 암호화폐 시장의 변동성과 전통적인 위험 자산과의 상관관계가 기술적 신호를 압도할 수 있다. • 규제 동향, 특히 암호화폐 분류 및 감독과 관련한 변화는 시장 심리에 영향을 미칠 수 있습니다.</div>
                     </div>
                 </div>
                 
-        <div style="background: rgba(177, 167, 152, 0.2); padding: 15px; border-radius: 10px; border: 1px solid rgba(177, 167, 152, 0.4);">
+        <div style="background: #ffffff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(24,37,38,0.08);">
+            <h4 style="color: #182526; margin-bottom: 10px; font-size: 1.0em; font-weight: 600;">📊 기본 분석 태그</h4>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <span style="font-weight: 600; color: #182526; font-size: 0.85em; min-width: 80px;">🌍 지역:</span>
+                    <span style="font-size: 0.85em;"><span style="color: #182526; font-weight: 500;">글로벌(Global)</span></span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <span style="font-weight: 600; color: #182526; font-size: 0.85em; min-width: 80px;">🏢 섹터:</span>
+                    <span style="font-size: 0.85em;"><span style="color: #b1a798;">현재 관망</span></span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <span style="font-weight: 600; color: #182526; font-size: 0.85em; min-width: 80px;">📈 감성:</span>
+                    <span style="font-size: 0.85em;"><span style="color: #b1a798;">중립(Neutral)</span></span>
+                </div>
+            </div>
+        </div>
+        
+                </div>
+            </div>
+            
+            <div id="modal-other-3" class="modal">
+                <div class="modal-content">
+                    <span class="close-modal" onclick="closeModal('modal-other-3')">&times;</span>
+                    <div style="display: flex; gap: 20px; margin-bottom: 20px;">
+                        <div style="width: 300px; height: 200px; background-image: url('https://images.unsplash.com/photo-1700635360469-634b959cd799?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzA2MDh8MHwxfHNlYXJjaHwxOHx8ZWNvbm9teSUyMGJ1c2luZXNzfGVufDF8MHx8fDE3NTIzOTM3NDZ8MA&ixlib=rb-4.1.0&q=80&w=400'); background-size: cover; background-position: center; border-radius: 12px; flex-shrink: 0; background-color: #f7fafc;"></div>
+                        <div style="flex: 1;">
+                            <h2 style="margin-bottom: 15px; color: #182526; font-weight: 600;">홍콩을 위한 작은 발걸음, 중국 우주 산업을 위한 거대한 도약...</h2>
+                            <div style="font-size: 0.9em; color: #182526;">
+                                [DATE] 2025-07-13 11:49 | [NEWS] South China Morning Post
+                                <br><a href="https://www.scmp.com/opinion/hong-kong-opinion/article/3317831/few-small-steps-hong-kong-giant-leap-chinas-space-sector?utm_source=rss_feed" target="_blank" style="color: #182526;">🔗 원문 보기</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+        <div style="background: #ffffff; padding: 20px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(24,37,38,0.08);">
+            <h4 style="color: #182526; margin-bottom: 10px; font-size: 1.0em; font-weight: 600;">📝 뉴스 요약</h4>
+            <p style="color: #182526; line-height: 1.6; font-size: 0.9em;">홍콩이 글로벌 우주 경제에서 주도적인 역할을 할 수 있다는 생각은 지난달 초 존 리카치우 행정장관에게 이 가능성을 제시했을 때 회의적인 반응을 받았다.</p>
+        </div>
+        
+                <div style="background: #ffffff; padding: 20px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(24,37,38,0.08);">
+                    <h4 style="color: #182526; margin-bottom: 10px; font-size: 1.0em; font-weight: 600;">🤖 AI 분석</h4>
+                    <div style="color: #182526; line-height: 1.6; font-size: 0.85em;">
+                <div style="margin-bottom: 8px;"><strong>📋 사실 검증:</strong> 뉴스에서는 홍콩이 중국의 우주 부문 개발에서 수행할 수 있는 역할에 대해 다루고 있습니다. 주요 관계자로는 홍콩 행정장관 리카치우가 있으며, 중국 본토의 우주 계획과의 협력을 시사합니다. 발췌문의 세부 정보가 제한적이어서 완전한 검증은 어렵지만, 중국의 알려진 우주 산업 확장 노력과 일치합니다.</div><div style="margin-bottom: 8px;"><strong>📈 시장 영향:</strong> 단기적으로는 우주 산업 개발이 장기적인 관점을 가지므로 시장에 미치는 즉각적인 영향은 제한적일 것으로 보입니다. 홍콩 증시에 상장된 항공우주 및 기술 기업에 일부 상승 여지가 있을 수 있습니다. 중기적으로는 우주 관련 상장 및 투자 상품을 위한 홍콩 금융 시장에 새로운 기회를 창출할 수 있습니다. 특히 미중 관계의 긴장 상황을 고려할 때 홍콩의 기술 자금 조달 허브로서의 위상을 강화할 수도 있습니다.</div><div style="margin-bottom: 8px;"><strong>💼 투자자 관점:</strong> 기관 투자자들은 초기 단계의 우주 기술 기업과 관련 인프라 투자에서 기회를 찾을 수 있습니다. 미국의 관세 위협으로 인한 현재 시장 불확실성은 초기 투자 의향에 영향을 미칠 수 있습니다.</div><div style="margin-bottom: 8px;"><strong>🎯 핵심 결론:</strong> 홍콩이 우주 산업 금융 허브로 자리매김하면서 새로운 분야의 투자 기회가 창출되고 있습니다. • 중국의 우주 개발 야망과의 연계는 상당한 자본 시장 활동을 촉진할 수 있다.</div><div><strong>⚠️ 리스크 요인:</strong> 기술 이전을 둘러싼 지정학적 긴장과 국제 협력에 미치는 영향. • 홍콩의 제한적인 현재 우주 산업 현황을 고려한 실행 위험...</div>
+                    </div>
+                </div>
+                
+        <div style="background: #ffffff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(24,37,38,0.08);">
             <h4 style="color: #182526; margin-bottom: 10px; font-size: 1.0em; font-weight: 600;">📊 기본 분석 태그</h4>
             <div style="display: flex; flex-direction: column; gap: 8px;">
                 <div style="display: flex; align-items: center; gap: 10px;">
@@ -1547,35 +1619,28 @@
                 <div class="modal-content">
                     <span class="close-modal" onclick="closeModal('modal-deep-1')">&times;</span>
                     <div style="display: flex; gap: 20px; margin-bottom: 20px;">
-                        <div style="width: 300px; height: 200px; background-image: url('https://images.unsplash.com/photo-1551135049-8a33b5883817?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzA2MDh8MHwxfHNlYXJjaHwyMHx8YnVzaW5lc3MlMjBmaW5hbmNlJTIwcHJvZmVzc2lvbmFsfGVufDF8MHx8fDE3NTE5MTE3ODF8MA&ixlib=rb-4.1.0&q=80&w=400'); background-size: cover; background-position: center; border-radius: 12px; flex-shrink: 0; background-color: #f7fafc;"></div>
+                        <div style="width: 300px; height: 200px; background-image: url('https://images.unsplash.com/photo-1675557570482-df9926f61d86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzA2MDh8MHwxfHNlYXJjaHw5fHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwdGVjaG5vbG9neXxlbnwxfDB8fHwxNzUyMzQ1MDg4fDA&ixlib=rb-4.1.0&q=80&w=400'); background-size: cover; background-position: center; border-radius: 12px; flex-shrink: 0; background-color: #f7fafc;"></div>
                         <div style="flex: 1;">
-                            <h2 style="margin-bottom: 15px; color: #182526; font-weight: 600;">관세가 미국 경제의 가장 큰 문제인 이유.</h2>
+                            <h2 style="margin-bottom: 15px; color: #182526; font-weight: 600;">VeChain이 AI, 빅데이터, IoT를 연결하는 연구에서 학술적으로 인정받았습니다.</h2>
                             <div style="font-size: 0.9em; color: #182526;">
-                                [DATE] 2025-07-09T08:47:25.172575 | [NEWS] Bloomberg
-                                <br><a href="https://www.bloomberg.com/news/videos/2025-07-08/why-tariffs-are-the-biggest-issue-for-the-us-economy-video" target="_blank" style="color: #182526;">🔗 원문 보기</a>
+                                [DATE] 2025-07-13 11:49 | [NEWS] Crypto News Flash
+                                <br><a href="https://www.crypto-news-flash.com/vechain-recognized-in-academic-study-for-bridging-ai-big-data-and-iot/?utm_source=rss&utm_medium=rss&utm_campaign=vechain-recognized-in-academic-study-for-bridging-ai-big-data-and-iot" target="_blank" style="color: #182526;">🔗 원문 보기</a>
                             </div>
                         </div>
                     </div>
-                    <div style="background: linear-gradient(135deg, #182526 0%, #b1a798 100%); color: white; padding: 20px; border-radius: 12px;">
-                        <h3 style="color: #efede2; margin-bottom: 15px;">[ANALYSIS] Miner 7 추가 분석</h3>
-                        <div style="color: #e2e8f0; line-height: 1.7;">
-                            <div style='margin-bottom: 20px;'>잠재적인 새로운 관세, 특히 구리에 대한 50%, 의약품에 대한 200% 관세 논의는 미국의 무역 정책에서 중요한 변화와 거대한 경제적 영향을 시사합니다. 이러한 움직임은 보호무역주의 경향이 커지고 있음을 반영하며 글로벌 공급망을 재편할 수 있습니다. 제안된 구리 관세는 특히 산업 생산 및 건설 부문에 큰 영향을 미칠 것이며, 의약품 관세는 의료 비용과 의약품 가용성에 극적인 변화를 가져올 수 있습니다. 이러한 조치는 국내 산업 보호를 목표로 하는 것으로 보이지만, 교역 파트너들의 보복 조치를 유발하여 더 광범위한 무역 긴장으로 확대될 가능성이 있습니다. 현재 인플레이션 압력과 공급망 문제 상황을 고려하면 시기가 더욱 중요합니다. </div><div style='margin-bottom: 15px;'><strong>🔑 핵심 포인트:</strong><br>• 공격적인 관세 제안은 무역 보호주의 심화의 신호이다.<br>• 인플레이션과 공급망에 상당한 영향을 미칠 가능성이 있습니다.<br>• 중요 산업의 국내 복귀를 가속화할 수 있습니다.</div><div style='margin-bottom: 15px;'><strong>🏭 영향 분야:</strong> 제조 및 산업, 제약 및 의료 산업, 건설 및 인프라, 국제 무역은 국가 간 상품 및 서비스의 교환을 의미합니다. 이는 세계 경제 성장의 중요한 동력이며, 국가들이 자원과 전문 지식을 활용하여 생산성을 높이고 소비자에게 더 다양한 선택지를 제공할 수 있도록 합니다. 국제 무역은 수출과 수입이라는 두 가지 주요 형태로 이루어지며, 각 국가는 비교 우위에 있는 상품이나 서비스를 전문적으로 생산하여 다른 국가와 교환합니다. 이러한 교환 과정에서 관세, 무역 장벽, 환율 변동 등의 요인이 영향을 미칠 수 있습니다. 국제 무역은 단순히 경제적인 측면뿐만 아니라 정치, 사회, 문화 등 다양한 분야에 걸쳐 복잡한 관계를 형성하며, 글로벌 공급망과 국제 협력을 통해 더욱 발전하고 있습니다.</div><div><strong>👀 주목할 점:</strong><br>• 잠재적 보복 조치에 대한 고려.<br>• 국내 물가 상승률에 미치는 영향.</div>
+                    <div style="background: #ffffff; color: #182526; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(24,37,38,0.08);">
+                        <h3 style="color: #182526; margin-bottom: 15px;">[ANALYSIS] Miner 7 추가 분석</h3>
+                        <div style="color: #182526; line-height: 1.7;">
+                            <div style='margin-bottom: 20px;'>VeChain's academic recognition represents a significant milestone in the convergence of blockchain technology with enterprise-level supply chain solutions. The study's validation of VeChain's capabilities in integrating AI, Big Data, and IoT demonstrates the platform's potential to revolutionize traditional supply chain management systems. This development is particularly noteworthy as it bridges the gap between theoretical blockchain applications and practical industrial implementation. The academic endorsement strengthens VeChain's position in the enterprise blockchain space, potentially accelerating institutional adoption. From a broader perspective, this recognition signals the maturing of blockchain technology beyond cryptocurrency applications into practical business solutions. The integration of multiple advanced technologies (AI, IoT, blockchain) indicates a shift toward more sophisticated, data-driven supply chain management systems. This could fundamentally alter how global supply chains operate, improving transparency, reducing costs, and enhancing efficiency. The timing is particularly relevant given the global focus on supply chain resilience post-pandemic and increasing demands for product traceability. For investors and industry stakeholders, this development suggests potential long-term value creation in enterprise blockchain solutions, particularly those focusing on real-world utility rather than speculative trading. The academic validation could also influence regulatory perspectives on blockchain technology, potentially leading to more favorable policies for enterprise blockchain adoption.</div><div style='margin-bottom: 15px;'><strong>🔑 핵심 포인트:</strong><br>• Academic validation strengthens enterprise blockchain credibility<br>• Integration of AI, IoT, and blockchain signals technological convergence<br>• Potential acceleration of institutional blockchain adoption</div><div style='margin-bottom: 15px;'><strong>🏭 영향 분야:</strong> Supply Chain Management, Enterprise Technology, Logistics, Manufacturing</div><div><strong>👀 주목할 점:</strong><br>• Enterprise adoption rates of blockchain solutions<br>• Regulatory responses to enterprise blockchain applications</div>
                         </div>
                     </div>
                     
-        <div style="background: rgba(177, 167, 152, 0.15); padding: 15px; border-radius: 10px; margin-bottom: 15px; border: 1px solid rgba(177, 167, 152, 0.3);">
+        <div style="background: #ffffff; padding: 20px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(24,37,38,0.08);">
             <h4 style="color: #182526; margin-bottom: 10px; font-size: 1.0em; font-weight: 600;">📝 뉴스 요약</h4>
-            <p style="color: #182526; line-height: 1.6; font-size: 0.9em;">후버 연구소의 랜히 치가 블룸버그 "더 클로즈"에 출연하여 구리 제품에 대한 50%, 의약품에 대한 최대 200%에 달하는 새로운 관세 가능성에 대해 논의합니다. (출처: 블룸버그)</p>
+            <p style="color: #182526; line-height: 1.6; font-size: 0.9em;">VeChain은 공급망 관리에 대한 기여로 학술 연구에서 인정받았습니다. VeChain은 공급망을 따라 상품의 효율적인 추적을 제공하는 것으로 보고되었습니다.</p>
         </div>
         
-                <div style="background: rgba(239, 237, 226, 0.4); padding: 15px; border-radius: 10px; margin-bottom: 15px; border: 1px solid rgba(24, 37, 38, 0.2);">
-                    <h4 style="color: #182526; margin-bottom: 10px; font-size: 1.0em; font-weight: 600;">🤖 AI 분석</h4>
-                    <div style="color: #182526; line-height: 1.6; font-size: 0.85em;">
-                <div style="margin-bottom: 8px;"><strong>📋 사실 검증:</strong> 최신 뉴스에 따르면 미국이 새로운 관세를 논의 중인데, 구리에는 50%, 의약품에는 200%의 관세를 부과하는 방안이 검토되고 있습니다. 하지만 이는 아직 확정된 관세가 아닌 잠재적인 내용입니다. </div><div style="margin-bottom: 8px;"><strong>📈 시장 영향:</strong> 단기적(1-3개월): 구리 및 헬스케어 주식의 즉각적인 변동성, 잠재적인 공급망 차질, 제조업체의 증가하는 투입 비용. 중장기적(3-12개월): 글로벌 공급망의 구조조정 가능성, 더 높은 수입 비용으로 인한 인플레이션 압력, 여러 부문에 영향을 미치는 무역 파트너의 보복 관세. 특히 구리에 대한 의존도가 높아 반도체 및 전자 산업에 상당한 영향이 예상됨.</div><div style="margin-bottom: 8px;"><strong>💼 투자자 관점:</strong> 개인 투자자들은 방어적인 포지셔닝과 국내 자산에 대한 투자를 고려해야 합니다. 미국 구리 광산 기업, 국내 제약 회사, 공급망 기술 기업에서 전략적 기회를 찾을 수 있습니다. 헬스케어 ETF는 신중한 평가가 필요합니다.</div><div style="margin-bottom: 8px;"><strong>🎯 핵심 결론:</strong> 영향을 받는 소재의 국내 생산 업체로의 다각화가 중요해진다... • 공급망 회복탄력성과 대체 소싱은 경쟁 우위가 될 것이다.</div><div><strong>⚠️ 리스크 요인:</strong> 무역 긴장 고조로 인한 광범위한 경제 둔화. • 공급망 차질로 인해 관련 부문에서 변동성이 커지고 있습니다.</div>
-                    </div>
-                </div>
-                
-        <div style="background: rgba(177, 167, 152, 0.2); padding: 15px; border-radius: 10px; border: 1px solid rgba(177, 167, 152, 0.4);">
+        <div style="background: #ffffff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(24,37,38,0.08);">
             <h4 style="color: #182526; margin-bottom: 10px; font-size: 1.0em; font-weight: 600;">📊 기본 분석 태그</h4>
             <div style="display: flex; flex-direction: column; gap: 8px;">
                 <div style="display: flex; align-items: center; gap: 10px;">
@@ -1600,8 +1665,8 @@
             <div class="modal-content">
                 <span class="close-modal" onclick="closeModal('feedbackModal')">&times;</span>
                 <h2 style="color: #182526; margin-bottom: 20px; font-weight: 600;">💬 의견 남기기</h2>
-                <div style="background: rgba(177, 167, 152, 0.1); padding: 20px; border-radius: 10px; border: 1px solid rgba(177, 167, 152, 0.3);">
-                    <textarea id="feedbackText" placeholder="여러분의 소중한 의견을 들려주세요..." style="width: 100%; height: 120px; padding: 15px; border: 1px solid #b1a798; border-radius: 8px; font-size: 14px; resize: vertical; background: #efede2; color: #182526; outline: none;"></textarea>
+                <div style="background: #ffffff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(24,37,38,0.08);">
+                    <textarea id="feedbackText" placeholder="여러분의 소중한 의견을 들려주세요..." style="width: 100%; height: 120px; padding: 15px; border: 1px solid #b1a798; border-radius: 8px; font-size: 14px; resize: vertical; background: #f8f7f2; color: #182526; outline: none;"></textarea>
                     <div style="margin-top: 15px; text-align: right;">
                         <button onclick="closeModal('feedbackModal')" style="background: #b1a798; color: white; border: none; padding: 10px 20px; border-radius: 6px; margin-right: 10px; cursor: pointer; font-size: 14px;">취소</button>
                         <button onclick="submitFeedback()" style="background: #182526; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-size: 14px;">의견 제출</button>
@@ -1626,6 +1691,7 @@
             await initializeRecaptcha();
             initializeApp();
             loadAllReactionCounts();
+            initDynamicSummaries();
         });
 
         // reCAPTCHA 초기화
@@ -1820,6 +1886,19 @@
             document.getElementById('feedbackText').value = '';
         }
 
+        // 동적 요약 박스 초기화
+        function initDynamicSummaries() {
+            const summaries = document.querySelectorAll('.news-summary');
+            summaries.forEach(summary => {
+                const textLength = summary.textContent.length;
+                if (textLength < 100) {
+                    summary.classList.add('short-content');
+                } else if (textLength > 250) {
+                    summary.classList.add('long-content');
+                }
+            });
+        }
+        
         // 기존 모달 함수들
         function openModal(modalId) {
             document.getElementById(modalId).style.display = 'block';
