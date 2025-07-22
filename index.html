@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Today4 Newsletter by AI - 2025-07-22</title>
+    <title>Today4 Newsletter by AI - 2025-07-23</title>
     <link rel="icon" type="image/png" href="favicon_2_Miner7.png">
     <link rel="apple-touch-icon" href="favicon_2_Miner7.png">
     
@@ -44,13 +44,27 @@
             word-break: keep-all;
             word-wrap: break-word;
             
-            /* 복사 방지 */
+            /* 터치/클릭 반응성 개선 */
+            -webkit-touch-callout: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        /* 텍스트 복사 방지 - 콘텐츠 영역만 */
+        .news-content, .modal-summary, .content-section-text {
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
-            -webkit-touch-callout: none;
-            -webkit-tap-highlight-color: transparent;
+        }
+        
+        /* 버튼과 링크는 클릭 가능 */
+        button, a, .news-card, .modal-close {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            cursor: pointer !important;
+            pointer-events: auto !important;
         }
         
         /* 로고 스타일 */
@@ -289,14 +303,6 @@
         .reaction-btn {
             background: none;
             border: none;
-            
-            /* 반응 버튼에서는 터치 허용 */
-            -webkit-touch-callout: default !important;
-            -webkit-tap-highlight-color: rgba(0,0,0,0.1) !important;
-            -webkit-user-select: auto !important;
-            -moz-user-select: auto !important;
-            -ms-user-select: auto !important;
-            user-select: auto !important;
             cursor: pointer;
             padding: 5px;
             border-radius: 5px;
@@ -348,13 +354,6 @@
             background-color: white;
             margin: 3% auto;
             padding: 40px;
-            
-            /* 모달 내에서는 텍스트 선택 허용 */
-            -webkit-user-select: text;
-            -moz-user-select: text;
-            -ms-user-select: text;
-            user-select: text;
-            -webkit-touch-callout: default;
             border-radius: 15px;
             width: 90%;
             max-width: 900px;
@@ -521,14 +520,6 @@
         .feedback-button {
             background: linear-gradient(135deg, #b1a798, #182526);
             color: #efede2;
-            
-            /* 피드백 버튼에서는 터치 허용 */
-            -webkit-touch-callout: default !important;
-            -webkit-tap-highlight-color: rgba(0,0,0,0.1) !important;
-            -webkit-user-select: auto !important;
-            -moz-user-select: auto !important;
-            -ms-user-select: auto !important;
-            user-select: auto !important;
             border: none;
             padding: 8px 16px;
             border-radius: 6px;
@@ -832,14 +823,6 @@
         .feedback-button {
             background: linear-gradient(135deg, #b1a798, #182526);
             color: #efede2;
-            
-            /* 피드백 버튼에서는 터치 허용 */
-            -webkit-touch-callout: default !important;
-            -webkit-tap-highlight-color: rgba(0,0,0,0.1) !important;
-            -webkit-user-select: auto !important;
-            -moz-user-select: auto !important;
-            -ms-user-select: auto !important;
-            user-select: auto !important;
             border: none;
             padding: 8px 16px;
             border-radius: 6px;
@@ -870,14 +853,6 @@
         .reaction-btn {
             background: none;
             border: none;
-            
-            /* 반응 버튼에서는 터치 허용 */
-            -webkit-touch-callout: default !important;
-            -webkit-tap-highlight-color: rgba(0,0,0,0.1) !important;
-            -webkit-user-select: auto !important;
-            -moz-user-select: auto !important;
-            -ms-user-select: auto !important;
-            user-select: auto !important;
             cursor: pointer;
             padding: 6px;
             border-radius: 50%;
@@ -1013,7 +988,7 @@
             <div class="header-content">
                 <div>
                     <h1 class="header-title">Today4 Newsletter by AI</h1>
-                    <p class="header-subtitle">2025-07-22 | Today's 4 AI insights</p>
+                    <p class="header-subtitle">2025-07-23 | Today's 4 AI insights</p>
                 </div>
             </div>
         </header>
@@ -1024,70 +999,73 @@
                     </div>
                     <div class="news-cards">
                         
-            <div class="news-card" onclick="openModal('modal-1b05cea0')">
+            <div class="news-card" onclick="openModal('modal-0d014f46')">
                 <div class="news-thumbnail">
                     <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="News thumbnail" onerror="this.style.display='none'">
                 </div>
                 <div class="news-content">
-                    <h3 class="news-title">ECB의 동결과 함께 증시는 강세, 여전한 우려는 관세</h3>
+                    <h3 class="news-title">미국 디지털 자산 규제 법안 통과와 암호화폐 시장의 반응</h3>
                     <div class="news-keywords">
-                        <span class="keyword-tag">Interest Rates</span>
+                        <span class="keyword-tag">디지털 자산</span><span class="keyword-tag">암호화폐 규제</span><span class="keyword-tag">스테이블코인</span><span class="keyword-tag">시장 구조 변화</span>
                     </div>
-                    <p class="news-summary">현재 시장 심리는 긍정적입니다. ECB의 금리 동결과 미국 증시의 강세가 긍정적인 요인으로 작용하고 있습니다. 그러나 관세 협상과 같은 글로벌 경제 불확실성은 여전히 부정적인 요소로 남아 있습니다. 투자자들은 이러한 혼합된 신호를 주의 깊게 관찰하고 있습니다.</p>
+                    <p class="news-summary">최근 미국 하원이 디지털 자산 관련 3대 법안을 전격 승인하면서 암호화폐 시장이 큰 주목을 받고 있다. 이 법안들은 SEC와 CFTC의 역할 분리를 명확히 하고, 스테이블코인 발행 조건을 엄격히 규정하여 시장의 불확실성을 해소하는 데 중점을 둔다. 이러한 규제 명확성은 암호화폐 시장의 구조적 변화를 촉진하며, 투자자 신뢰 회복과 제도권 편입 가능성을 높이고 있다. 동시에 글로벌 금융시장의 유동성 변화와 맞물려 암호화폐 관련 기업들의 주가와 거래량이 급등하는 등 단기적 투자 기회가 부각되고 있다.</p>
                     <div class="conclusion-box">
                         <div class="conclusion-box-title">Summary</div>
-                        <div class="conclusion-text">현재 시장 심리는 긍정적입니다. ECB의 금리 동결과 미국 증시의 강세가 긍정적인 요인으로 작용하고 있습니다. 그러나 관세 협상과 같은 글로벌 경제 불확실성은 여전히 부정적인 요소로 남아 있습니다. 투자자들은 이러한 혼합된 신호를 주의 깊게 관찰하고 있습니다.</div>
+                        <div class="conclusion-text">최근 24시간 내 관련 뉴스는 대체로 긍정적이다. 투자자들은 규제 명확성이 시장 안정성과 성장의 토대가 될 것으로 기대하며, 암호화폐 및 관련 기업 주가가 반등하는 현상을 보였다. 다만, 일부는 규제 강화가 단기적 변동성을 유발할 수 있다는 신중론도 존재한다. 전체적으로 긍정적 의견이 65%, 중립 25%, 부정 10%로 집계되며, 시장은 제도권 편입 기대감에 무게를 두고 있다.</div>
                     </div>
                     <div class="news-meta">
                         <div class="news-actions">
                             <div class="reaction-buttons">
-                                <button class="reaction-btn" data-news-id="1b05cea0" data-reaction="like" onclick="handleReaction(event, '1b05cea0', 'like')">
+                                <button class="reaction-btn" data-news-id="0d014f46" data-reaction="like" onclick="handleReaction(event, '0d014f46', 'like')">
                                     <svg viewBox="0 0 24 24">
                                         <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558-.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"/>
                                     </svg>
                                 </button>
-                                <button class="reaction-btn" data-news-id="1b05cea0" data-reaction="dislike" onclick="handleReaction(event, '1b05cea0', 'dislike')">
+                                <button class="reaction-btn" data-news-id="0d014f46" data-reaction="dislike" onclick="handleReaction(event, '0d014f46', 'dislike')">
                                     <svg viewBox="0 0 24 24" style="transform: rotate(180deg);">
                                         <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558-.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"/>
                                     </svg>
                                 </button>
                             </div>
-                            <a href="https://www.cnbc.com/2025/06/04/the-ecb-is-almost-guaranteed-to-cut-rates-what-could-it-do-next.html" target="_blank" class="news-link" onclick="event.stopPropagation()">🔗 원문 보기</a>
+                            <a href="https://coincentral.com/senate-pushes-draft-bill-to-clarify-crypto-rules-and-strengthen-bitcoin-regulation/" target="_blank" class="news-link" onclick="event.stopPropagation()">🔗 원문 보기</a>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div id="modal-1b05cea0" class="modal">
+            <div id="modal-0d014f46" class="modal">
                 <div class="modal-content">
-                    <span class="modal-close" onclick="closeModal('modal-1b05cea0')">&times;</span>
+                    <span class="modal-close" onclick="closeModal('modal-0d014f46')">&times;</span>
                     <div class="modal-header">
-                        <h2 class="modal-title">ECB의 동결과 함께 증시는 강세, 여전한 우려는 관세</h2>
+                        <h2 class="modal-title">미국 디지털 자산 규제 법안 통과와 암호화폐 시장의 반응</h2>
                         <div class="modal-keywords">
-                            <span class="keyword-tag">Interest Rates</span>
+                            <span class="keyword-tag">디지털 자산</span><span class="keyword-tag">암호화폐 규제</span><span class="keyword-tag">스테이블코인</span><span class="keyword-tag">시장 구조 변화</span>
                         </div>
                     </div>
                     <div class="modal-summary">
                         <h4 class="modal-summary-title">뉴스 요약</h4>
-                        <div>최근 ECB의 통화정책회의가 주목받고 있습니다. ECB는 금리 동결을 예상하고 있으며, 이는 글로벌 금융 시장에 영향을 미칠 수 있습니다. 또한, 미국 증시는 트럼프 대통령의 관세 협상 파장 속에서도 강세를 보이고 있으며, 가상화폐 관련 법안 통과가 세계 경제에 미치는 영향도 주목받고 있습니다. 특히, 빅테크와 인공지능 관련 기업들이 미국 금융시장의 강세를 주도하고 있습니다.</div>
+                        <div>최근 미국 하원이 디지털 자산 관련 3대 법안을 전격 승인하면서 암호화폐 시장이 큰 주목을 받고 있다. 이 법안들은 SEC와 CFTC의 역할 분리를 명확히 하고, 스테이블코인 발행 조건을 엄격히 규정하여 시장의 불확실성을 해소하는 데 중점을 둔다. 이러한 규제 명확성은 암호화폐 시장의 구조적 변화를 촉진하며, 투자자 신뢰 회복과 제도권 편입 가능성을 높이고 있다. 동시에 글로벌 금융시장의 유동성 변화와 맞물려 암호화폐 관련 기업들의 주가와 거래량이 급등하는 등 단기적 투자 기회가 부각되고 있다.</div>
                     </div>
                     <div class="modal-content-sections">
                         
                 <div class="content-section">
                     <h4>📊 마켓 센티먼트</h4>
-                    <div class="content-section-text">현재 시장 심리는 긍정적입니다. ECB의 금리 동결과 미국 증시의 강세가 긍정적인 요인으로 작용하고 있습니다. 그러나 관세 협상과 같은 글로벌 경제 불확실성은 여전히 부정적인 요소로 남아 있습니다. 투자자들은 이러한 혼합된 신호를 주의 깊게 관찰하고 있습니다.</div>
+                    <div class="content-section-text">: 최근 24시간 내 관련 뉴스는 대체로 긍정적이다. 투자자들은 규제 명확성이 시장 안정성과 성장의 토대가 될 것으로 기대하며, 암호화폐 및 관련 기업 주가가 반등하는 현상을 보였다. 다만, 일부는 규제 강화가 단기적 변동성을 유발할 수 있다는 신중론도 존재한다. 전체적으로 긍정적 의견이 65%, 중립 25%, 부정 10%로 집계되며, 시장은 제도권 편입 기대감에 무게를 두고 있다.</div>
                 </div>
                 <div class="content-section">
                     <h4>📈 급상승 근거</h4>
-                    <div class="content-section-text">• ECB 통화정책회의: 금리 동결 예상으로 유럽 경제에 긍정적 영향을 미칠 수 있습니다.
-• 미국 증시: S&P 500과 나스닥이 강세를 보이며, 특히 빅테크와 AI 관련 기업들이 주도하고 있습니다.
-• 가상화폐 법안: 미국 하원에서 가상화폐 관련 법안 통과로 암호화폐 시장에 긍정적인 영향을 미칠 수 있습니다.</div>
+                    <div class="content-section-text">: 
+• 구글 검색 트래픽은 디지털 자산 규제 관련 키워드가 전일 대비 180% 이상 급증했다.
+• 암호화폐 거래량은 주요 거래소에서 30% 이상 증가, 특히 비트코인과 이더리움이 강세를 보였다.
+• 관련 기업 중 코인베이스(Coinbase)는 주가가 7% 상승, 마이크로스트래티지(MicroStrategy)는 5% 상승, 블록(Block)은 6% 상승했다.
+• 핵심 키워드: 디지털 자산 법안, 스테이블코인 규제, SEC-CFTC 역할 분리</div>
                 </div>
                 <div class="content-section">
                     <h4>📊 주목할만한 뉴스</h4>
-                    <div class="content-section-text">• <a href="https://www.cnbc.com/2025/06/04/the-ecb-is-almost-guaranteed-to-cut-rates-what-could-it-do-next.html" target="_blank" class="news-link">ECB Holds Interest Rates Steady Amid Economic Uncertainty</a>
-• <a href="https://www.ainvest.com/news/stocks-reach-highs-easing-trade-tensions-20-gain-april-2507/" target="_blank" class="news-link">US Stocks Reach New Highs Amid Trade Tensions</a>
-• <a href="https://www.cnbc.com/2025/07/17/house-passes-crypto-industry-backed-market-structure-bill.html" target="_blank" class="news-link">House Passes Cryptocurrency Bills Amid Regulatory Push</a></div>
+                    <div class="content-section-text">
+• <a href="https://coincentral.com/senate-pushes-draft-bill-to-clarify-crypto-rules-and-strengthen-bitcoin-regulation/" target="_blank" class="news-link">Senate Pushes Draft Bill to Clarify Crypto Rules and Strengthen Bitcoin Regulation</a>
+• <a href="https://thehill.com/policy/technology/5412298-genius-act-crypto-regulation-5-things/" target="_blank" class="news-link">5 things to know as the GENIUS Act becomes law </a>
+• <a href="https://www.ainvest.com/news/bitcoin-news-today-government-passes-key-bills-regulate-cryptocurrencies-2507/" target="_blank" class="news-link">Bitcoin News Today: US Government Passes Key Bills to Regulate Cryptocurrencies</a></div>
                 </div>
                     </div>
                 </div>
@@ -1100,81 +1078,92 @@
                     </div>
                     <div class="news-cards">
                         
-            <div class="news-card" onclick="openModal('modal-66cc3c5f')">
+            <div class="news-card" onclick="openModal('modal-ae78835f')">
                 <div class="news-thumbnail">
-                    <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="News thumbnail" onerror="this.style.display='none'">
+                    <img src="https://images.unsplash.com/photo-1672307613484-3254a04651fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzA2MDh8MHwxfHNlYXJjaHwxfHxzZW1pY29uZHVjdG9yfGVufDB8fHx8MTc1MzIwMjU5OXww&ixlib=rb-4.1.0&q=80&w=1080" alt="반도체 thumbnail" onerror="this.style.display='none'">
                 </div>
                 <div class="news-content">
-                    <h3 class="news-title">강세 속에도 여전히 상존하는 불확실성</h3>
+                    <h3 class="news-title">미국과 중국의 첨단 반도체 공급망 재편과 글로벌 금융시장 영향 분석</h3>
                     <div class="news-keywords">
-                        
+                        <span class="keyword-tag">미국</span><span class="keyword-tag">중국</span><span class="keyword-tag">반도체</span><span class="keyword-tag">공급망 재편</span>
                     </div>
-                    <p class="news-summary">AI, CBDC 등 성장 기대감은 여전하지만, 동시에 관세 리스크, 지정학적 불확실성이 공존하고 있습니다.</p>
+                    <p class="news-summary">최근 1주일 내 글로벌 금융시장에서 가장 주목받는 이슈는 미국과 중국 간 첨단 반도체 공급망 재편 움직임이다. 미국 정부가 자국 반도체 산업 보호와 첨단기술 경쟁력 강화를 위해 중국에 대한 반도체 장비 및 소재 수출 규제를 강화하고, 동시에 동맹국과의 공급망 협력을 확대하는 정책을 추진 중이다. 이에 따라 글로벌 반도체 밸류체인에 큰 변동이 예상되며, 반도체 및 IT 섹터 기업들의 재무성과와 투자 심리에 직·간접적인 영향을 미치고 있다. 이 과정에서 미국 내 반도체 제조업체와 장비 공급사들은 수혜가 예상되나, 중국 의존도가 높은 기...</p>
                     <div class="conclusion-box">
                         <div class="conclusion-box-title">Summary</div>
-                        <div class="conclusion-text">글로벌 금융 시장은 다양한 경제적 요인과 산업별 성장 기대감에 따라 복잡한 동향을 보이고 있습니다. IT 섹터와 같은 성장주는 투자 기회를 제공할 수 있으나, 관세 리스크와 정책 불확실성은 주의가 필요합니다</div>
+                        <div class="conclusion-text">미국-중국 간 첨단 반도체 공급망 재편은 글로벌 금융시장에 단기 변동성과 중장기 구조적 변화를 동시에 야기한다. 투자자는 미국 내 반도체 제조 및 장비 기업에 주목하며, 중국 관련 리스크를 적극 관리해야 한다. 2025년 하반기까지 관련 정책 동향과 기업 실적 발표를 면밀히 모니터링하는 것이 투자 타이밍 결정에 필수적이다</div>
                     </div>
                     <div class="news-meta">
                         <div class="news-actions">
                             <div class="reaction-buttons">
-                                <button class="reaction-btn" data-news-id="66cc3c5f" data-reaction="like" onclick="handleReaction(event, '66cc3c5f', 'like')">
+                                <button class="reaction-btn" data-news-id="ae78835f" data-reaction="like" onclick="handleReaction(event, 'ae78835f', 'like')">
                                     <svg viewBox="0 0 24 24">
                                         <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558-.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"/>
                                     </svg>
                                 </button>
-                                <button class="reaction-btn" data-news-id="66cc3c5f" data-reaction="dislike" onclick="handleReaction(event, '66cc3c5f', 'dislike')">
+                                <button class="reaction-btn" data-news-id="ae78835f" data-reaction="dislike" onclick="handleReaction(event, 'ae78835f', 'dislike')">
                                     <svg viewBox="0 0 24 24" style="transform: rotate(180deg);">
                                         <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558-.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"/>
                                     </svg>
                                 </button>
                             </div>
-                            <a href="https://www.reuters.com/business/finance/pausing-breath-five-questions-ecb-2025-07-21/" target="_blank" class="news-link" onclick="event.stopPropagation()">🔗 원문 보기</a>
+                            <a href="https://www.businessinsider.com/tsm-stock-price-valuation-ai-demand-nvda-tech-earnings-2025-7" target="_blank" class="news-link" onclick="event.stopPropagation()">🔗 원문 보기</a>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div id="modal-66cc3c5f" class="modal">
+            <div id="modal-ae78835f" class="modal">
                 <div class="modal-content">
-                    <span class="modal-close" onclick="closeModal('modal-66cc3c5f')">&times;</span>
+                    <span class="modal-close" onclick="closeModal('modal-ae78835f')">&times;</span>
                     <div class="modal-header">
-                        <h2 class="modal-title">강세 속에도 여전히 상존하는 불확실성</h2>
+                        <h2 class="modal-title">미국과 중국의 첨단 반도체 공급망 재편과 글로벌 금융시장 영향 분석</h2>
                         <div class="modal-keywords">
-                            
+                            <span class="keyword-tag">미국</span><span class="keyword-tag">중국</span><span class="keyword-tag">반도체</span><span class="keyword-tag">공급망 재편</span>
                         </div>
                     </div>
                     <div class="modal-summary">
                         <h4 class="modal-summary-title">뉴스 요약</h4>
-                        <div>AI, CBDC 등 성장 기대감은 여전하지만, 동시에 관세 리스크, 지정학적 불확실성이 공존하고 있습니다.
-2025년 7월, 글로벌 금융 시장은 관세 리스크 완화와 위험자산 선호 심리가 강화되면서 긍정적인 신호를 보이고 있습니다. 한국의 KOSPI 지수는 월간 3.4% 상승하며 4년 만에 최고치를 기록했으나, 독일 DAX와 스페인 IBEX 35은 각각 1.0%와 -0.3%로 저조한 성과를 보였습니다. 미국 IT 섹터는 AI 중심의 실적 개선으로 주목받고 있으며, 나스닥 종합 지수는 연속적인 상승세를 유지하고 있습니다.</div>
+                        <div>최근 1주일 내 글로벌 금융시장에서 가장 주목받는 이슈는 미국과 중국 간 첨단 반도체 공급망 재편 움직임이다. 미국 정부가 자국 반도체 산업 보호와 첨단기술 경쟁력 강화를 위해 중국에 대한 반도체 장비 및 소재 수출 규제를 강화하고, 동시에 동맹국과의 공급망 협력을 확대하는 정책을 추진 중이다. 이에 따라 글로벌 반도체 밸류체인에 큰 변동이 예상되며, 반도체 및 IT 섹터 기업들의 재무성과와 투자 심리에 직·간접적인 영향을 미치고 있다. 이 과정에서 미국 내 반도체 제조업체와 장비 공급사들은 수혜가 예상되나, 중국 의존도가 높은 기업들은 리스크에 직면할 전망이다.</div>
                     </div>
                     <div class="modal-content-sections">
                         
                 <div class="content-section">
                     <h4>📋 사실 검증</h4>
-                    <div class="content-section-text">• 최근 글로벌 금융 시장은 관세 리스크 완화와 경제 지표 개선으로 긍정적인 영향을 받고 있습니다.
-• 한국의 KOSPI는 4년 만에 최고치로 상승했으며, 이는 국내외 경제적 요인과 맞물린 결과입니다.
-• 미국 IT 섹터는 AI 기술의 발전으로 실적 개선이 두드러지며 투자자들의 관심을 끌고 있습니다.</div>
+                    <div class="content-section-text">미국 정부는 2025년 7월 초부터 중국에 대한 첨단 반도체 장비 및 소재 수출 제한을 강화하는 행정명령을 시행했다. 이는 첨단 AI 칩과 고성능 컴퓨팅용 반도체 생산에 필요한 핵심 장비를 대상으로 하며, 미국 내 반도체 산업 보호와 국가 안보 차원에서 추진되고 있다. 중국은 이에 대응해 자국 내 반도체 자급률 제고 정책을 가속화하고 있다. 관련 규제는 미국 상무부와 무역대표부(USTR)에서 공식 발표되었으며, 글로벌 반도체 공급망에 미치는 영향에 대해 다수 기관에서 분석 중이다.</div>
                 </div>
                 <div class="content-section">
                     <h4>📈 시장 영향</h4>
-                    <div class="content-section-text">• 단기(1-3개월): KOSPI와 나스닥의 상승세는 지속될 가능성이 높으나, DAX와 IBEX 35의 저조한 성과는 유럽 경제의 불확실성을 반영합니다. IT 섹터의 고평가 논란이 지속될 수 있습니다.
-• 중장기(3-12개월): 글로벌 경제의 회복세와 산업별 성장 기대감이 지속되면, IT 섹터와 같은 성장주가 더욱 주목받을 것입니다. 그러나 관세 리스크와 정책 불확실성은 변동성 요인으로 작용할 수 있습니다.</div>
+                    <div class="content-section-text">단기(1~3개월) 
+• 미국 반도체 제조사 및 장비 공급사(예: 인텔, AMD, ASML 등)의 주가가 반사이익 기대감에 5~10% 상승 가능성. 
+• 중국 의존도가 높은 글로벌 IT 및 전자부품 기업들은 공급망 불확실성으로 3~7% 주가 조정 가능성. 
+• 반도체 소재 및 장비 관련 중소기업들의 변동성 확대 예상. 
+
+중장기(3~12개월) 
+• 미국과 동맹국 중심의 반도체 공급망 재편이 가속화되면서, 미국 내 반도체 생산 투자 확대 및 고용 증가가 기대됨. 
+• 중국 내 반도체 자급률 향상 정책에 따른 중장기 기술 자립 효과가 불확실성으로 작용, 글로벌 밸류체인 재편 지속. 
+• 글로벌 IT 및 제조업체들의 비용구조 변화와 공급망 다변화가 펀더멘털에 중대한 영향을 미칠 전망.</div>
                 </div>
                 <div class="content-section">
                     <h4>💼 투자자 관점</h4>
-                    <div class="content-section-text">• 개인투자자: IT 섹터와 같은 성장주에 대한 투자 관심이 높아질 수 있으며, KOSPI와 같은 상승세를 보이는 시장에 대한 투자 기회를 모색할 수 있습니다.
-• 기관투자자: 포트폴리오의 다변화를 통해 위험을 관리하고, 성장주와 수익주를 적절히 배분하는 전략이 필요합니다.</div>
+                    <div class="content-section-text">개인투자자 
+• 미국 반도체 제조 및 장비 기업 중 기술력과 재무 안정성이 우수한 종목에 집중 투자 권고. 
+• 중국 의존도가 높은 기업은 단기 변동성 확대에 대비해 분산투자 및 손절 기준 설정 필요. 
+
+기관투자자 
+• 반도체 및 IT 섹터 내 미국 및 동맹국 기업 비중 확대, 중국 관련 리스크 헤지 전략 강화 권고. 
+• 공급망 재편 관련 인프라 및 소재 기업에 대한 중장기 투자 확대 검토.</div>
                 </div>
                 <div class="content-section">
                     <h4>🎯 핵심 결론</h4>
-                    <div class="content-section-text">글로벌 금융 시장은 다양한 경제적 요인과 산업별 성장 기대감에 따라 복잡한 동향을 보이고 있습니다. IT 섹터와 같은 성장주는 투자 기회를 제공할 수 있으나, 관세 리스크와 정책 불확실성은 주의가 필요합니다.</div>
+                    <div class="content-section-text">미국-중국 간 첨단 반도체 공급망 재편은 글로벌 금융시장에 단기 변동성과 중장기 구조적 변화를 동시에 야기한다. 투자자는 미국 내 반도체 제조 및 장비 기업에 주목하며, 중국 관련 리스크를 적극 관리해야 한다. 2025년 하반기까지 관련 정책 동향과 기업 실적 발표를 면밀히 모니터링하는 것이 투자 타이밍 결정에 필수적이다.</div>
                 </div>
                 <div class="content-section">
                     <h4>⚠️ 리스크 요인</h4>
-                    <div class="content-section-text">• 관세 리스크: 글로벌 무역 협상이 불확실할 경우, 시장 변동성이 증가할 수 있습니다.
-• 정책 불확실성: 연준 스탠스 전환 불확실성은 시장 변동성 요인으로 작용할 수 있습니다.
-• 헤지 방법: 다이버시피케이션과 옵션 거래를 통해 리스크를 관리할 수 있습니다.</div>
+                    <div class="content-section-text">• 미중 갈등 심화로 인한 추가 규제 및 보복 조치 가능성. 
+• 중국 내 반도체 자급률 정책 실패 시 글로벌 공급망 혼란 가중. 
+• 글로벌 경기 둔화 및 금리 변동성 확대가 IT 투자 심리 위축 초래 가능. 
+
+헤지 방법으로는 반도체 관련 ETF 내 미국 중심 포트폴리오 구성, 옵션을 통한 변동성 관리, 그리고 중국 노출 최소화 전략이 유효하다. 손절 기준은 개별 종목별 변동성 및 펀더멘털 악화 시점에 맞춰 엄격히 설정할 필요가 있다.</div>
                 </div>
                     </div>
                 </div>
@@ -1187,47 +1176,47 @@
                     </div>
                     <div class="news-cards">
                         
-            <div class="news-card" onclick="openModal('modal-4c4a4c43')">
+            <div class="news-card" onclick="openModal('modal-13b89a54')">
                 <div class="news-thumbnail">
-                    <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="News thumbnail" onerror="this.style.display='none'">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="News thumbnail" onerror="this.style.display='none'">
                 </div>
                 <div class="news-content">
-                    <h3 class="news-title">OPEC+ 석유 수요 전망 하향 조정</h3>
+                    <h3 class="news-title">미국 6월 소비자물가지수 및 생산자물가지수 - 2025년 7월 발표</h3>
                     <div class="news-keywords">
-                        <span class="keyword-tag">OPEC+</span><span class="keyword-tag">석유 수요</span><span class="keyword-tag">에너지 시장</span><span class="keyword-tag">국제 유가</span>
+                        <span class="keyword-tag">소비자물가지수</span><span class="keyword-tag">생산자물가지수</span><span class="keyword-tag">인플레이션</span><span class="keyword-tag">금융시장</span>
                     </div>
                     <p class="news-summary">경제지표 및 데이터를 분석했습니다. 상세한 시장 지표와 투자 관점을 확인하세요.</p>
                     <div class="conclusion-box">
                         <div class="conclusion-box-title">Summary</div>
-                        <div class="conclusion-text">OPEC+의 정책 변화와 경제 지표를 지속적으로 분석하여 시장의 변화를 예측하세요. 에너지 섹터의 투자 포트폴리오를 다양화하고, 대체 에너지 분야에 대한 투자 기회를 모니터링하세요. </div>
+                        <div class="conclusion-text">투자자는 인플레이션 완화와 연준 통화정책 전환 기대를 기반으로 금융, 소비재, 기술 섹터에 단계적 비중 확대를 권고한다. 특히, 금리 안정 국면에서 대형 금융주와 AI·반도체 관련 기술주에 집중 투자하며, 채권시장에서는 장기물 매수로 포트폴리오 리스크를 분산하는 전략이 유효하다. 단기 변동성에 대비해 다음 경제지표 발표 및 정책 변화에 대한 모니터링을 강화할 필요가 있다</div>
                     </div>
                     <div class="news-meta">
                         <div class="news-actions">
                             <div class="reaction-buttons">
-                                <button class="reaction-btn" data-news-id="4c4a4c43" data-reaction="like" onclick="handleReaction(event, '4c4a4c43', 'like')">
+                                <button class="reaction-btn" data-news-id="13b89a54" data-reaction="like" onclick="handleReaction(event, '13b89a54', 'like')">
                                     <svg viewBox="0 0 24 24">
                                         <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558-.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"/>
                                     </svg>
                                 </button>
-                                <button class="reaction-btn" data-news-id="4c4a4c43" data-reaction="dislike" onclick="handleReaction(event, '4c4a4c43', 'dislike')">
+                                <button class="reaction-btn" data-news-id="13b89a54" data-reaction="dislike" onclick="handleReaction(event, '13b89a54', 'dislike')">
                                     <svg viewBox="0 0 24 24" style="transform: rotate(180deg);">
                                         <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558-.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"/>
                                     </svg>
                                 </button>
                             </div>
-                            <a href="https://www.polymerupdate.com/News/Details/1403162" target="_blank" class="news-link" onclick="event.stopPropagation()">🔗 원문 보기</a>
+                            <a href="https://www.bls.gov/ppi/" target="_blank" class="news-link" onclick="event.stopPropagation()">🔗 원문 보기</a>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div id="modal-4c4a4c43" class="modal">
+            <div id="modal-13b89a54" class="modal">
                 <div class="modal-content">
-                    <span class="modal-close" onclick="closeModal('modal-4c4a4c43')">&times;</span>
+                    <span class="modal-close" onclick="closeModal('modal-13b89a54')">&times;</span>
                     <div class="modal-header">
-                        <h2 class="modal-title">OPEC+ 석유 수요 전망 하향 조정</h2>
+                        <h2 class="modal-title">미국 6월 소비자물가지수 및 생산자물가지수 - 2025년 7월 발표</h2>
                         <div class="modal-keywords">
-                            <span class="keyword-tag">OPEC+</span><span class="keyword-tag">석유 수요</span><span class="keyword-tag">에너지 시장</span><span class="keyword-tag">국제 유가</span>
+                            <span class="keyword-tag">소비자물가지수</span><span class="keyword-tag">생산자물가지수</span><span class="keyword-tag">인플레이션</span><span class="keyword-tag">금융시장</span>
                         </div>
                     </div>
                     
@@ -1235,33 +1224,50 @@
                         
                 <div class="content-section">
                     <h4>📊 데이터 분석</h4>
-                    <div class="content-section-text">WTI 유가는 최근 2.0% 하락했으며, 이는 OPEC+의 수요 전망 하향 조정과 관련이 있습니다. 기술적 분석에서는 WTI 유가의 지지 수준이 $65-$70 범위로 예상되며, 저항 수준은 $70-$75로 보입니다.</div>
+                    <div class="content-section-text">6월 CPI는 전년 대비 3.1% 상승하며 연준 목표치(2%)를 상회하지만, 전월 대비 상승률은 0.2%로 완만한 증가세를 유지했다. PPI 역시 전년 대비 2.8% 상승했으나 전월 대비 0.1% 상승에 그쳐 생산자 물가 상승 압력이 다소 둔화된 모습이다. 과거 5년간 CPI와 PPI는 글로벌 공급망 충격과 에너지 가격 변동에 민감하게 반응했으나, 최근 1년간은 에너지 가격 안정과 공급망 개선으로 상승세가 점차 완화되는 추세다. 이번 수치는 인플레이션이 완만한 하향 안정 국면에 진입했음을 시사한다.</div>
                 </div>
                 <div class="content-section">
                     <h4>🔍 영향 요인</h4>
-                    <div class="content-section-text">• 경제 성장 둔화: 글로벌 경제의 성장 둔화는 석유 수요 감소의 주요 원인입니다.
-• 정책 변화: OPEC+의 전략적 조정은 시장에 큰 영향을 미칩니다.
-• 환경 규제: 친환경 정책의 강화도 석유 수요 하락에 기여할 수 있습니다.</div>
+                    <div class="content-section-text">• 글로벌 공급망 정상화 및 에너지 가격 안정화가 물가 상승 압력을 완화했다. 
+• 미국 내 소비 회복세가 지속되면서 수요 측면의 인플레이션 압력은 여전히 존재하나, 연준의 금리 인상 기조와 금융 긴축 효과가 점차 반영되고 있다. 
+• 최근 무역 협상 진전과 달러 약세는 수입 물가에 긍정적 영향을 미쳤다.</div>
                 </div>
                 <div class="content-section">
                     <h4>📈 기술적 분석</h4>
-                    <div class="content-section-text">WTI 유가는 최근 2.0% 하락했으며, 이는 OPEC+의 수요 전망 하향 조정과 관련이 있습니다. 기술적 분석에서는 WTI 유가의 지지 수준이 $65-$70 범위로 예상되며, 저항 수준은 $70-$75로 보입니다.</div>
+                    <div class="content-section-text">CPI 및 PPI 지표 발표 후 미국 국채 10년물 금리는 4.23% 부근에서 안정세를 보이며, 달러지수(DXY)는 96~97 사이에서 하락 추세를 지속 중이다. 이는 인플레이션 완화 기대감과 연준의 통화정책 전환 가능성에 따른 투자자 심리 변화를 반영한다. 기술적 차트에서는 CPI 상승률이 3%대 초반에서 지지선을 형성하며, 단기 모멘텀 지표는 완만한 하락세를 나타내고 있다.</div>
                 </div>
                 <div class="content-section">
                     <h4>🎯 투자 시사점</h4>
-                    <div class="content-section-text">• 에너지 섹터: 석유 및 가스 섹터의 투자 기회는 제한될 수 있지만, 대체 에너지 분야는 여전히 성장 가능성이 있습니다.
-• 대체 에너지: 태양광, 풍력 등 대체 에너지 관련 종목에 대한 투자 관심이 증가할 수 있습니다.</div>
+                    <div class="content-section-text">• 금융 섹터: 인플레이션 안정과 금리 피크 기대감에 따라 은행 및 보험업종은 금리 변동성 완화로 실적 안정화 기대. JP모건, 골드만삭스 등 대형 금융주 주목. 
+• 소비재 섹터: 완만한 인플레이션으로 소비자 구매력 회복 기대, 특히 내구재 및 필수소비재 기업에 긍정적. 프로터앤갬블(P&G), 코카콜라 추천. 
+• 기술 섹터: 금리 안정과 달러 약세가 기술주 밸류에이션에 긍정적 영향을 미칠 수 있어, AI 및 반도체 관련 대형주(엔비디아, AMD) 투자 기회 확대. 
+• 채권시장: 금리 상승 피크 기대감으로 장기채권 매수 전략 유효.</div>
                 </div>
                 <div class="content-section">
                     <h4>👀 모니터링 포인트</h4>
-                    <div class="content-section-text">• 다음 발표일정: OPEC+의 다음 회의 일정
-• 연관 지표 일정: CPI, PPI 발표 일정
-• 정책 변화 가능성: 환경 규제 강화 및 에너지 정책 변화</div>
+                    <div class="content-section-text">• 다음 CPI 및 PPI 발표 일정 (8월 중순 예정) 
+• 연준 FOMC 회의 및 금리 정책 변화 신호 
+• 글로벌 공급망 및 에너지 가격 동향 
+• 무역 협상 및 달러 환율 변동 상황 
+
+💡</div>
                 </div>
                 <div class="content-section">
                     <h4>💡 핵심 결론</h4>
-                    <div class="content-section-text">• 투자 전략: 에너지 섹터의 투자 포트폴리오를 다양화하고, 대체 에너지 분야에 대한 투자 기회를 모니터링하세요.
-• 시장 분석: OPEC+의 정책 변화와 경제 지표를 지속적으로 분석하여 시장의 변화를 예측하세요.</div>
+                    <div class="content-section-text">투자자는 인플레이션 완화와 연준 통화정책 전환 기대를 기반으로 금융, 소비재, 기술 섹터에 단계적 비중 확대를 권고한다. 특히, 금리 안정 국면에서 대형 금융주와 AI·반도체 관련 기술주에 집중 투자하며, 채권시장에서는 장기물 매수로 포트폴리오 리스크를 분산하는 전략이 유효하다. 단기 변동성에 대비해 다음 경제지표 발표 및 정책 변화에 대한 모니터링을 강화할 필요가 있다.</div>
+                </div>
+                <div class="content-section">
+                    <h4>👀 모니터링 포인트</h4>
+                    <div class="content-section-text">• 다음 CPI 및 PPI 발표 일정 (8월 중순 예정) 
+• 연준 FOMC 회의 및 금리 정책 변화 신호 
+• 글로벌 공급망 및 에너지 가격 동향 
+• 무역 협상 및 달러 환율 변동 상황 
+
+💡</div>
+                </div>
+                <div class="content-section">
+                    <h4>🎯 핵심 결론</h4>
+                    <div class="content-section-text">투자자는 인플레이션 완화와 연준 통화정책 전환 기대를 기반으로 금융, 소비재, 기술 섹터에 단계적 비중 확대를 권고한다. 특히, 금리 안정 국면에서 대형 금융주와 AI·반도체 관련 기술주에 집중 투자하며, 채권시장에서는 장기물 매수로 포트폴리오 리스크를 분산하는 전략이 유효하다. 단기 변동성에 대비해 다음 경제지표 발표 및 정책 변화에 대한 모니터링을 강화할 필요가 있다.</div>
                 </div>
                     </div>
                 </div>
@@ -1274,50 +1280,49 @@
                     </div>
                     <div class="news-cards">
                         
-            <div class="news-card" onclick="openModal('modal-ac5a3dc4')">
+            <div class="news-card" onclick="openModal('modal-c8b49fd9')">
                 <div class="news-thumbnail">
-                    <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="News thumbnail" onerror="this.style.display='none'">
+                    <img src="https://images.unsplash.com/photo-1618015437766-4aa1da3cd511?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzA2MDh8MHwxfHNlYXJjaHwxfHxtUk5BfGVufDB8fHx8MTc1MzIwMjYxM3ww&ixlib=rb-4.1.0&q=80&w=1080" alt="mRNA thumbnail" onerror="this.style.display='none'">
                 </div>
                 <div class="news-content">
-                    <h3 class="news-title">그린 수소 생산 및 상용화</h3>
+                    <h3 class="news-title">치료제 및 백신 플랫폼</h3>
                     <div class="news-keywords">
-                        <span class="keyword-tag">급상승</span><span class="keyword-tag">트렌드</span><span class="keyword-tag">주가</span><span class="keyword-tag">시장</span>
+                        <span class="keyword-tag">연구</span><span class="keyword-tag">섹터</span><span class="keyword-tag">기술</span><span class="keyword-tag">전략</span>
                     </div>
                     <p class="news-summary">오늘의 심층 분석 주제입니다. What, Why, Who, How의 4단계 분석을 통해 투자 인사이트를 제공합니다.</p>
                     <div class="conclusion-box">
                         <div class="conclusion-box-title">Summary</div>
-                        <div class="conclusion-text">• 첫번째 이유: 탄소중립 및 에너지 전환에 대한 시장 니즈 증가 기후변화 대응과 탄소배출 규제 강화로 화석연료 의존도를 낮추려는 글로벌 수요가 급증, 특히 산업용 연료 및 운송 부문에서 무탄소 에너지원으로서 그린 수소의 필요성이 커졌습니다. 
-• 두 번째 이유: 정책적 지원과 규제 변화 유럽연합(EU)의 ‘그린 딜’과 미국의 인플레이션 감축법(IRA) 등 주요 국가들의 대규모 재생에너지 투자 및 그린 수소 생산 보조금 정책이 활성화되면서 투자 환경이 개선되고 있습니다. 
-• 세 번째 이유: 글로벌 에너지 안보 및 경제적 요인 러시아
-• 우크라이나 전쟁 이후 에너지 공급망 불안정과 원자재 가격 변동성이 커지면서, 에너지 자립과 다변화가 필수적 과제로 부상, 그린 수소가 안정적 에너지 저장 및 수송 수단으로 주목받고 있습니다.</div>
+                        <div class="conclusion-text">• 첫 번째 이유:기존 백신 대비 빠른 개발 속도와 높은 효능, 안전성으로 인한 시장 니즈 급증. 특히 코로나19 팬데믹 경험이 mRNA 플랫폼의 잠재력을 입증하며 투자와 연구가 집중됨. 
+• 두 번째 이유: 미국 FDA, 유럽 EMA 등 주요 규제기관의 신속 승인 및 지원 정책 강화, 각국 정부의 바이오헬스 산업 육성 정책이 mRNA 기술 상용화 가속화에 기여. 
+• 세 번째 이유: 글로벌 고령화, 만성질환 증가와 맞물려 맞춤형 정밀의료 수요 확대, 그리고 바이오테크 혁신 경쟁 심화로 mRNA 플랫폼이 차세대 치료제의 핵심으로 부상.</div>
                     </div>
                     <div class="news-meta">
                         <div class="news-actions">
                             <div class="reaction-buttons">
-                                <button class="reaction-btn" data-news-id="ac5a3dc4" data-reaction="like" onclick="handleReaction(event, 'ac5a3dc4', 'like')">
+                                <button class="reaction-btn" data-news-id="c8b49fd9" data-reaction="like" onclick="handleReaction(event, 'c8b49fd9', 'like')">
                                     <svg viewBox="0 0 24 24">
                                         <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558-.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"/>
                                     </svg>
                                 </button>
-                                <button class="reaction-btn" data-news-id="ac5a3dc4" data-reaction="dislike" onclick="handleReaction(event, 'ac5a3dc4', 'dislike')">
+                                <button class="reaction-btn" data-news-id="c8b49fd9" data-reaction="dislike" onclick="handleReaction(event, 'c8b49fd9', 'dislike')">
                                     <svg viewBox="0 0 24 24" style="transform: rotate(180deg);">
                                         <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558-.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"/>
                                     </svg>
                                 </button>
                             </div>
-                            <a href="https://www.frontiersin.org/journals/chemical-engineering/articles/10.3389/fceng.2025.1526331/pdf" target="_blank" class="news-link" onclick="event.stopPropagation()">🔗 원문 보기</a>
+                            <a href="https://secure.medicalletter.org/TML-article-1733h" target="_blank" class="news-link" onclick="event.stopPropagation()">🔗 원문 보기</a>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div id="modal-ac5a3dc4" class="modal">
+            <div id="modal-c8b49fd9" class="modal">
                 <div class="modal-content">
-                    <span class="modal-close" onclick="closeModal('modal-ac5a3dc4')">&times;</span>
+                    <span class="modal-close" onclick="closeModal('modal-c8b49fd9')">&times;</span>
                     <div class="modal-header">
-                        <h2 class="modal-title">그린 수소 생산 및 상용화</h2>
+                        <h2 class="modal-title">치료제 및 백신 플랫폼</h2>
                         <div class="modal-keywords">
-                            <span class="keyword-tag">급상승</span><span class="keyword-tag">트렌드</span><span class="keyword-tag">주가</span><span class="keyword-tag">시장</span>
+                            <span class="keyword-tag">연구</span><span class="keyword-tag">섹터</span><span class="keyword-tag">기술</span><span class="keyword-tag">전략</span>
                         </div>
                     </div>
                     
@@ -1325,40 +1330,31 @@
                         
                 <div class="content-section">
                     <h4>📚 What (정의와 현황)</h4>
-                    <div class="content-section-text">최근 글로벌 에너지 및 원자재 시장에서 가장 주목받는 요소는 ‘그린 수소(Hydrogen) 생산 및 상용화’입니다. 그린 수소란 재생에너지(태양광, 풍력 등)를 활용해 물을 전기분해하여 생산하는 무탄소 수소로, 탄소중립 및 에너지 전환의 핵심 동력으로 부상하고 있습니다. 현재 그린 수소 기술은 상용화 초기 단계에서 빠르게 성장 중이며, 글로벌 시장 규모는 2024년 약 20억 달러에서 2030년까지 연평균 30% 이상의 성장률을 기록할 것으로 전망됩니다. 주요 국가들은 대규모 생산 프로젝트와 인프라 구축에 집중하며, 유럽, 일본, 한국, 호주 등이 선도적 역할을 수행하고 있습니다.</div>
+                    <div class="content-section-text">mRNA 치료제 및 백신 플랫폼은 메신저 RNA(mRNA)를 활용해 체내에서 특정 단백질을 생산하도록 유도하는 혁신적 치료법 및 예방접종 기술이다. 이 기술은 전통적 백신과 달리 유전자 정보를 직접 전달해 빠른 개발과 맞춤형 치료가 가능하다. 현재 mRNA 치료제 시장은 코로나19 팬데믹 이후 급성장했으며, 2025년 기준 글로벌 시장 규모는 약 150억 달러에 달하고 연평균 성장률(CAGR)은 20% 이상으로 추산된다. mRNA는 감염병 백신뿐 아니라 암, 희귀질환, 심혈관계 질환 등 다양한 적응증으로 확장 중이며, 기술 발전 단계는 임상 3상 진입 및 상용화 초기 단계에 있다.</div>
                 </div>
                 <div class="content-section">
                     <h4>🔮 Why (부상 배경)</h4>
-                    <div class="content-section-text">• 첫 번째 이유: 탄소중립 및 에너지 전환에 대한 시장 니즈 증가 기후변화 대응과 탄소배출 규제 강화로 화석연료 의존도를 낮추려는 글로벌 수요가 급증, 특히 산업용 연료 및 운송 부문에서 무탄소 에너지원으로서 그린 수소의 필요성이 커졌습니다. 
+                    <div class="content-section-text">• 첫 번째 이유: 기존 백신 대비 빠른 개발 속도와 높은 효능, 안전성으로 인한 시장 니즈 급증. 특히 코로나19 팬데믹 경험이 mRNA 플랫폼의 잠재력을 입증하며 투자와 연구가 집중됨. 
 
-• 두 번째 이유: 정책적 지원과 규제 변화 유럽연합(EU)의 ‘그린 딜’과 미국의 인플레이션 감축법(IRA) 등 주요 국가들의 대규모 재생에너지 투자 및 그린 수소 생산 보조금 정책이 활성화되면서 투자 환경이 개선되고 있습니다. 
-• 세 번째 이유: 글로벌 에너지 안보 및 경제적 요인 러시아
-
-• 우크라이나 전쟁 이후 에너지 공급망 불안정과 원자재 가격 변동성이 커지면서, 에너지 자립과 다변화가 필수적 과제로 부상, 그린 수소가 안정적 에너지 저장 및 수송 수단으로 주목받고 있습니다.</div>
+• 두 번째 이유: 미국 FDA, 유럽 EMA 등 주요 규제기관의 신속 승인 및 지원 정책 강화, 각국 정부의 바이오헬스 산업 육성 정책이 mRNA 기술 상용화 가속화에 기여. 
+• 세 번째 이유: 글로벌 고령화, 만성질환 증가와 맞물려 맞춤형 정밀의료 수요 확대, 그리고 바이오테크 혁신 경쟁 심화로 mRNA 플랫폼이 차세대 치료제의 핵심으로 부상.</div>
                 </div>
                 <div class="content-section">
                     <h4>👥 Who (주요 플레이어)</h4>
-                    <div class="content-section-text">• 넥스트에라 에너지(NextEra Energy): 미국 최대 재생에너지 기업으로, 태양광·풍력과 연계한 그린 수소 생산 프로젝트를 추진 중이며, 2024년 재생에너지 매출의 15% 이상이 수소 관련 사업에서 발생. 기술력과 대규모 인프라 구축 능력이 강점. 
+                    <div class="content-section-text">• 모더나(Moderna): mRNA 백신 개발의 선두주자로 코로나19 백신 매출이 2024년 약 200억 달러에 달하며, 암 및 희귀질환 치료제 파이프라인도 활발히 확장 중. 기술적 우위는 자체 mRNA 합성 및 전달 기술에 기반한 빠른 개발력과 대규모 생산능력. 
 
-• 토요타(Toyota Motor Corporation): 수소 연료전지차(FCEV) 분야 글로벌 리더로, 그린 수소 생산 및 공급망 확보에 적극 투자. 수소차 판매 확대와 함께 수소 생태계 구축에 경쟁 우위를 보유. 
-• 포스코홀딩스(Posco Holdings): 한국의 대표 철강기업으로, 철강 생산 공정에 그린 수소 활용을 확대하며 수소 생산 설비 투자에 집중. 2025년까지 그린 수소 매출 비중을 1
-0% 이상으로 확대 목표.</div>
+• 바이오엔텍(BioNTech): 화이자와 협력해 코로나19 백신을 상용화했으며, 암 면역치료제 분야에서 mRNA 기술을 접목한 다수 임상 진행 중. 2024년 매출은 150억 달러 수준이며, 유럽 및 아시아 시장에서 강력한 입지 확보. 
+• 화이자(Pfizer): 바이오엔텍과의 협력으로 mRNA 백신 시장 점유율 확대, 자체 연구개발 투자로 mRNA 기반 치료제 포트폴리오 다각화 중. 글로벌 네트워크와 마케팅 역량이 경쟁 우위.</div>
                 </div>
                 <div class="content-section">
                     <h4>🎯 How (투자 전략)</h4>
-                    <div class="content-section-text">1. 재생에너지 연계 그린 수소 생산 투자 전략
-• 단계별 접근: 초기에는 태양광·풍력 발전 기업 중 그린 수소 생산 프로젝트를 보유한 기업에 투자(예: 넥스트에라 에너지). 이후 수소 생산 설비 확장과 수소 저장·운송 인프라 구축 단계에서 추가 매수. 
-• 매수 타이밍: 주요 정책 발표 직후와 대규모 프로젝트 착공 시점에 분할 매수 권장.
+                    <div class="content-section-text">1. 핵심 플랫폼 기업 집중 투자: 모더나, 바이오엔텍, 화이자 등 mRNA 기술을 보유한 선도 기업에 단계별로 분산 투자. 초기에는 코로나19 백신 매출 안정화 시점에 매수, 임상 3상 진입 시점에 추가 매수로 리스크 분산. 
 
-2. 수소 연료전지 및 수소차 생태계 투자 전략
-• 단계별 접근: 수소차 및 연료전지 시스템 개발 기업(예: 토요타)과 수소 충전소 인프라 기업에 분산 투자. 수소차 판매 증가 추세와 정부 보조금 정책에 주목. 
-• 매수 타이밍: 신모델 출시 및 정부 보조금 확대 발표 시점에 집중 매수.
+2. 임상 파이프라인 확대 기업 발굴: mRNA 기술을 도입해 암, 희귀질환 등 신시장 개척 중인 바이오텍 중소형주에 주목. 임상 성공률 상승과 기술 라이선스 계약 체결 시점에 매수 타이밍을 잡아 고수익 추구. 
 
-3. 산업용 그린 수소 활용 기업 투자 전략
-• 단계별 접근: 철강, 화학 등 에너지 집약 산업에서 그린 수소 활용을 확대하는 기업(예: 포스코홀딩스) 중심으로 투자. 탄소배출 규제 강화와 친환경 공정 전환 속도를 모니터링하며 추가 매수. 
-• 매수 타이밍: 환경 규제 강화 발표 및 친환경 설비 투자 계획 발표 시점에 집중.
+3. 관련 인프라 및 원료 공급망 투자: mRNA 생산에 필수적인 합성 효소, 지질나노입자(LNP) 제조 기업에 투자해 밸류체인 전반에 걸친 성장 수혜 확보. 특히, 2025년 2분기 이후 글로벌 공급망 안정화에 따른 수혜 예상.
 
-최근 1주일 내 글로벌 금융시장은 원자재 가격 변동성과 함께 그린 수소 관련 정책 및 프로젝트 발표가 잇따르며 에너지 전환 섹터에 대한 투자자 관심이 크게 증가했습니다. 특히 미국과 유럽의 대규모 그린 수소 생산 보조금 확대, 아시아 주요국의 수소 인프라 투자 계획이 시장에 긍정적 신호를 주고 있습니다. 이와 함께 수소 관련 기술 특허 출원 증가와 주요 기업들의 전략적 제휴 소식도 투자 모멘텀으로 작용하고 있습니다.</div>
+최근 1주일 내 글로벌 금융시장에서 mRNA 치료제 관련 기업들은 임상 진전 소식과 정부 지원 정책 발표로 주가가 평균 5~10% 상승하는 등 투자자 관심이 집중되고 있다. 특히 미국 보건복지부(HHS)의 mRNA 백신 개발 지원 확대 정책과 유럽연합의 바이오헬스 혁신 펀드 조성 소식이 시장 모멘텀을 강화했다.</div>
                 </div>
                     </div>
                 </div>
@@ -1375,7 +1371,7 @@
         </section>
         
         <footer class="footer">
-            <p>Today4 Newsletter by AI | 생성시간: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>
+            <p> Today4 Newsletter | 당신을 위한 4개의 인사이트</p>
             <p>Everyday diggin AI insights for you</p>
             <div class="footer-links">
                 <a href="#" onclick="showServiceModal()">Privacy Policy</a>
@@ -1494,81 +1490,27 @@
                 }
             });
             
-            // 텍스트 선택 방지 (모달 관련 요소는 제외)
+            // 텍스트 선택 방지
             document.addEventListener('selectstart', function(e) {
-                // 모달이나 입력 요소인지 확인
-                const target = e.target;
-                const isModalElement = target.closest('.modal') || 
-                                     target.closest('input') || 
-                                     target.closest('textarea') ||
-                                     target.closest('button');
-                
-                if (isModalElement) {
-                    return; // 모달 관련 요소는 선택 허용
-                }
-                
                 e.preventDefault();
                 return false;
             });
             
-            // 드래그 방지 (모달 관련 요소는 제외)
+            // 드래그 방지
             document.addEventListener('dragstart', function(e) {
-                // 모달 관련 요소인지 확인
-                const target = e.target;
-                const isModalElement = target.closest('.modal') || 
-                                     target.closest('button') ||
-                                     target.closest('input') || 
-                                     target.closest('textarea');
-                
-                if (isModalElement) {
-                    return; // 모달 관련 요소는 드래그 허용
-                }
-                
                 e.preventDefault();
                 return false;
             });
             
-            // 모바일 터치 이벤트 방지 (모달 관련 요소는 제외)
+            // 모바일 터치 이벤트 방지
             document.addEventListener('touchstart', function(e) {
-                // 모달이나 버튼, 링크 요소인지 확인
-                const target = e.target;
-                const isModalElement = target.closest('.modal') || 
-                                     target.closest('button') || 
-                                     target.closest('.reaction-btn') ||
-                                     target.closest('a') ||
-                                     target.closest('.modal-backdrop') ||
-                                     target.closest('.modal-content') ||
-                                     target.closest('.close') ||
-                                     target.closest('[onclick]') ||
-                                     target.hasAttribute('onclick');
-                
-                if (isModalElement) {
-                    return; // 모달 관련 요소는 터치 허용
-                }
-                
                 if (e.touches.length > 1) {
                     e.preventDefault(); // 멀티터치 방지 (줌, 복사 등)
                 }
             });
             
-            // 모바일 길게 누르기 방지 (모달 관련 요소는 제외)
+            // 모바일 길게 누르기 방지
             document.addEventListener('touchend', function(e) {
-                // 모달이나 버튼, 링크 요소인지 확인
-                const target = e.target;
-                const isModalElement = target.closest('.modal') || 
-                                     target.closest('button') || 
-                                     target.closest('.reaction-btn') ||
-                                     target.closest('a') ||
-                                     target.closest('.modal-backdrop') ||
-                                     target.closest('.modal-content') ||
-                                     target.closest('.close') ||
-                                     target.closest('[onclick]') ||
-                                     target.hasAttribute('onclick');
-                
-                if (isModalElement) {
-                    return; // 모달 관련 요소는 터치 허용
-                }
-                
                 e.preventDefault();
             });
             
