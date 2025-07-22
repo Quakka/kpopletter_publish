@@ -779,6 +779,26 @@
                 font-size: 0.9rem;
             }
             
+            /* 모바일에서 섹션 박스 강화 */
+            .content-section {
+                margin-bottom: 20px !important;
+                padding: 15px !important;
+                background: #ffffff !important;
+                border: 2px solid #b1a798 !important;
+                border-radius: 8px !important;
+                box-shadow: 0 6px 15px rgba(24, 37, 38, 0.15) !important;
+                display: block !important;
+                visibility: visible !important;
+            }
+            
+            .content-section h4 {
+                font-size: 1.0rem !important;
+                font-weight: 700 !important;
+                color: #182526 !important;
+                margin-bottom: 12px !important;
+                display: block !important;
+            }
+            
             .feedback-button {
                 width: 180px;
                 font-size: 0.9rem;
@@ -786,22 +806,22 @@
             
             /* 모바일 모달 개선 */
             .modal-content {
-                margin: 5% auto;
+                margin: 2% auto;
                 padding: 20px 15px;
                 width: 95%;
-                max-height: 85vh;
+                max-height: 90vh;
+                overflow-y: scroll;
+                -webkit-overflow-scrolling: touch;
             }
             
             .modal-summary {
-                max-height: 40vh;
-                overflow-y: auto;
-                -webkit-overflow-scrolling: touch;
+                max-height: none;
+                margin-bottom: 20px;
             }
             
             .modal-content-sections {
-                max-height: 40vh;
-                overflow-y: auto;
-                -webkit-overflow-scrolling: touch;
+                flex: 1;
+                overflow-y: visible;
             }
         }
         
