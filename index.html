@@ -1509,9 +1509,17 @@
                 }
             });
             
-            // 모바일 길게 누르기 방지
+            // 모바일 길게 누르기 방지 (복사 방지만, 클릭은 허용)
+            let touchStartTime;
+            document.addEventListener('touchstart', function(e) {
+                touchStartTime = Date.now();
+            });
+            
             document.addEventListener('touchend', function(e) {
-                e.preventDefault();
+                // 길게 누르기(500ms 이상)만 방지, 일반 터치는 허용
+                if (Date.now() - touchStartTime > 500) {
+                    e.preventDefault();
+                }
             });
             
             // iOS Safari 특별 처리
