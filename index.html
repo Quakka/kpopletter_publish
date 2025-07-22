@@ -364,6 +364,8 @@
             display: flex;
             flex-direction: column;
             box-sizing: border-box;
+            /* 모바일 스크롤 개선 */
+            -webkit-overflow-scrolling: touch;
         }
         
         .modal-close {
@@ -780,6 +782,26 @@
             .feedback-button {
                 width: 180px;
                 font-size: 0.9rem;
+            }
+            
+            /* 모바일 모달 개선 */
+            .modal-content {
+                margin: 5% auto;
+                padding: 20px 15px;
+                width: 95%;
+                max-height: 85vh;
+            }
+            
+            .modal-summary {
+                max-height: 40vh;
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            .modal-content-sections {
+                max-height: 40vh;
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
             }
         }
         
